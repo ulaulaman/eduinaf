@@ -2,7 +2,7 @@
 Contributors: ulaulaman
 Tags: eduinaf, inaf
 Requires at least: 4.8.5
-Tested up to: 4.9.2
+Tested up to: 4.9.3
 Requires PHP: 7.0.18
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Il plugin, in italiano, aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
 
 == Description ==
-Il plugin è stato originariamente sviluppato per integrarsi con il plugin [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con il plugin sono stati cancellati dalla versione attuale in un plugin separato [presente sul repository ufficiale di Wordpress](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [versione su git-hub](https://github.com/ulaulaman/widget-for-co-authors)).
+Il plugin è stato originariamente sviluppato per integrarsi con il plugin [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con il plugin sono stati cancellati dalla versione attuale e spostati in un plugin separato [presente sul repository ufficiale di Wordpress](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [versione su git-hub](https://github.com/ulaulaman/widget-for-co-authors)).
 Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin footer*, manipola il *feed rss* per accreditare l'articolo all'autore/i, inclusi *guest author*, aggiunge degli shortcode per la creazione automatica dei link alle attività astroedu e alle notizie spacescoop. In particolare lo shortcode utilizza due parametri, il codice dell'attività/news e la lingua.
 
 [astroedu code="..." lang="..."]
@@ -20,6 +20,7 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 Entrambi i parametri sono obbligatori per il corretto funzionamento dello shortcode.
 
 == Changelog ==
+* 0.9.5 test per wp 4.9.3
 * 0.9.4 aggiunto il Plugin URI
 * 0.9.3 aggiunto il GitHub Plugin URI per l'installazione e l'aggiornamento tramite il GitHub Updater
 * 0.9.2 modifiche alla pagina di documentazione; pulizia nella cartella principale
