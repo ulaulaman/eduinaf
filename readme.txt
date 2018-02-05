@@ -4,7 +4,6 @@ Tags: eduinaf, inaf
 Requires at least: 4.8.5
 Tested up to: 4.9.2
 Requires PHP: 7.0.18
-Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +20,7 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 Entrambi i parametri sono obbligatori per il corretto funzionamento dello shortcode.
 
 == Changelog ==
+* 0.9.4 aggiunto il Plugin URI
 * 0.9.3 aggiunto il GitHub Plugin URI per l'installazione e l'aggiornamento tramite il GitHub Updater
 * 0.9.2 modifiche alla pagina di documentazione; pulizia nella cartella principale
 * 0.9.1 aggiunta shortcode per i link a spacescoop usando codice e lingua della news
