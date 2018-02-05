@@ -1,3 +1,7 @@
+Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
+
+## Descrizione
+
 Il plugin è stato originariamente sviluppato per integrarsi con il plugin [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con il plugin sono stati cancellati dalla versione attuale in un plugin separato [presente sul repository ufficiale di Wordpress](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [versione su git-hub](https://github.com/ulaulaman/widget-for-co-authors)).
 Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin footer*, manipola il *feed rss* per accreditare l'articolo all'autore/i, inclusi *guest author*, aggiunge degli shortcode per la creazione automatica dei link alle attività astroedu e alle notizie spacescoop. In particolare lo shortcode utilizza due parametri, il codice dell'attività/news e la lingua.
 
@@ -7,7 +11,8 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 
 Entrambi i parametri sono obbligatori per il corretto funzionamento dello shortcode.
 
-== Changelog ==
+## Changelog
+* 0.9.3 aggiunto il GitHub Plugin URI per l'installazione e l'aggiornamento tramite il GitHub Updater
 * 0.9.2 modifiche alla pagina di documentazione; pulizia nella cartella principale
 * 0.9.1 aggiunta shortcode per i link a spacescoop usando codice e lingua della news
 * 0.9 aggiunta shortcode per i link ad astroEdu usando codice e lingua dell'attività
