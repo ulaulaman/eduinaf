@@ -21,6 +21,7 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 Entrambi i parametri sono obbligatori per il corretto funzionamento dello shortcode.
 
 == Changelog ==
+* 0.9.3 aggiunto il GitHub Plugin URI per l'installazione e l'aggiornamento tramite il GitHub Updater
 * 0.9.2 modifiche alla pagina di documentazione; pulizia nella cartella principale
 * 0.9.1 aggiunta shortcode per i link a spacescoop usando codice e lingua della news
 * 0.9 aggiunta shortcode per i link ad astroEdu usando codice e lingua dell'attività
