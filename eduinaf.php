@@ -2,7 +2,7 @@
 /*
 Plugin Name: Edu INAF Plugin
 Description: Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
-Version: 0.9.5
+Version: 0.9.6
 Author: Gianluigi Filippelli
 Author URI: http://dropseaofulaula.blogspot.it/
 Plugin URI: https://github.com/ulaulaman/eduinaf
