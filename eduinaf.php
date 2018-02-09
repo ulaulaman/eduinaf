@@ -5,7 +5,7 @@ Description: Il plugin aggiunge varie funzionalità al sito Edu INAF senza modif
 Version: 0.9.6
 Author: Gianluigi Filippelli
 Author URI: http://dropseaofulaula.blogspot.it/
-Plugin URI: https://github.com/ulaulaman/eduinaf
+Plugin URI: https://ulaulaman.github.io/eduinaf/
 GitHub Plugin URI: https://github.com/ulaulaman/eduinaf
 License: GPLv2 or later
 */
