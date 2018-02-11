@@ -21,7 +21,7 @@ Entrambi i parametri sono obbligatori per il corretto funzionamento degli shortc
 
 == Changelog ==
 * 201802.1 semplificazioni del codice e nuova numerazione:
-** crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode dei link*
+  * crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode dei link*
 * 0.9.6 test per wp 4.9.4
 * 0.9.5 test per wp 4.9.3
 * 0.9.4 aggiunto il Plugin URI
