@@ -11,7 +11,7 @@ Il plugin, in italiano, aggiunge varie funzionalità al sito Edu INAF senza modi
 
 == Description ==
 Il plugin è stato originariamente sviluppato per integrarsi con il plugin [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con il plugin sono stati cancellati dalla versione attuale e spostati nel plugin [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del plugin](https://ulaulaman.github.io/widget-for-co-authors/)).
-Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin footer*, manipola il *feed rss* per accreditare l'articolo all'autore/i, inclusi *guest author*, aggiunge degli shortcode per la creazione automatica dei link alle attività astroedu e alle notizie spacescoop. In particolare entrambi gli shortcode utilizzano due parametri, il codice dell'attività/news e la lingua.
+Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin footer*, manipola il *feed rss* per accreditare l'articolo all'autore/i, inclusi *guest author* (**Attenzione**: la manipolazione del *feed* funziona solo con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/) installato), aggiunge degli shortcode per la creazione automatica dei link alle attività astroedu e alle notizie spacescoop. In particolare entrambi gli shortcode utilizzano due parametri, il codice dell'attività/news e la lingua.
 
 [astroedu code="..." lang="..."]
 
@@ -20,6 +20,8 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 Entrambi i parametri sono obbligatori per il corretto funzionamento degli shortcode.
 
 == Changelog ==
+* 201802.1 semplificazioni del codice e nuova numerazione:
+** crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode dei link*
 * 0.9.6 test per wp 4.9.4
 * 0.9.5 test per wp 4.9.3
 * 0.9.4 aggiunto il Plugin URI
