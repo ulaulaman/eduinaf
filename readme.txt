@@ -20,7 +20,7 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 Entrambi i parametri sono obbligatori per il corretto funzionamento degli shortcode.
 
 == Changelog ==
-* 201802.1 semplificazioni del codice e nuova numerazione:
+* 2018.02.11 semplificazioni del codice e nuova numerazione:
   * crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode dei link*
 * 0.9.6 test per wp 4.9.4
 * 0.9.5 test per wp 4.9.3
