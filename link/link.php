@@ -40,3 +40,28 @@ add_shortcode('spacescoop', 'spacescoop');
 
    return $link;
 }
+
+# Sapere
+add_shortcode('sapere', 'sapere');
+
+ function sapere ($atts, $content = null) {
+
+   extract(
+      shortcode_atts(
+         array( 
+		'url' => null,
+                'num' => null,
+                'data' => null,
+		'doi' => null,
+	 ),
+         $atts
+      )
+   );
+
+   if ( $doi <> null )
+     {$link = '<p><em>Estratto dall\'articolo "<a href="'.$url.' target="sapere">'.$content.'</a>" uscito su Sapere n.'.$num.' di '.$data.'. doi:<a href="https://dx.doi.org/'.$doi.'" target="doi">'.$doi.'</a></em></p>';}
+   else
+     {$link = '<p><em>Estratto dall\'articolo "<a href="'.$url.' target="sapere">'.$content.'</a>" uscito su Sapere n.'.$num.' di '.$data.'</em></p>';}
+
+   return $link;
+}
