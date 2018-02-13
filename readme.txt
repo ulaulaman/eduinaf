@@ -1,4 +1,4 @@
-=== Edu INAF Plugin ===
+=== Edu INAF Tools ===
 Contributors: ulaulaman
 Tags: eduinaf, inaf
 Requires at least: 4.8.5
