@@ -16,7 +16,7 @@ add_shortcode('astroedu', 'astroedu');
       )
    );
 
-   $link = '<a href="http://astroedu.iau.org/'.$lang.'/activities/'.$code.'/" target="astroedu">'.$content.'</a>';
+   $link = '<a href="http://astroedu.iau.org/'.$lang.'/activities/'.$code.'/" target="astroedu" style="color: #faaf3f;">'.$content.'</a>';
 
    return $link;
 }
@@ -36,7 +36,7 @@ add_shortcode('spacescoop', 'spacescoop');
       )
    );
 
-   $link = '<a href="http://www.spacescoop.org/'.$lang.'/scoops/'.$code.'/" target="spacescoop">'.$content.'</a>';
+   $link = '<a href="http://www.spacescoop.org/'.$lang.'/scoops/'.$code.'/" target="spacescoop" style="color: #03709c">'.$content.'</a>';
 
    return $link;
 }
