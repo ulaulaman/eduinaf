@@ -20,6 +20,7 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 Entrambi i parametri sono obbligatori per il corretto funzionamento degli shortcode.
 
 == Changelog ==
+* 2018.0214 aggiunti colori ai *link*
 * 2018.0212 aggiunto shortcode per articoli tratti da Sapere
 * 2018.02.11 semplificazioni del codice e nuova numerazione:
   * crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode dei link*
