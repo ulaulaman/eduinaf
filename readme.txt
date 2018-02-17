@@ -19,7 +19,16 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 
 Entrambi i parametri sono obbligatori per il corretto funzionamento degli shortcode.
 
+Il plugin, inoltre, aggiunge uno shortcode per la creazione di un *loop* di post, mostrati nel formato griglia:
+
+[eduinafgrid categoriaeduinaf="..." tageduinaf="..."]
+
+Se non specificati, i valori di categoria e tag sono di *default* rispettivamente a 'libri' e 'libri-per-bambini-e-ragazzi'.
+
 == Changelog ==
+* 2018.0217 aggiunto un *loop* personalizzato:
+  * aggiunto uno *shortcode* che mostra tutti i post dati una categoria e un'etichetta: di default sono rispettivamente 'libri' e 'libri-per-bambini-e-ragazzi'
+  * incluso il css per la griglia
 * 2018.0214 aggiunti colori ai *link*
 * 2018.0212 aggiunto shortcode per articoli tratti da Sapere
 * 2018.02.11 semplificazioni del codice e nuova numerazione:
