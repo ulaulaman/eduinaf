@@ -16,6 +16,13 @@ function eduinaf_toplevel_page() {
 	echo '<p>[astroedu code="..." lang="..."]</p>';
         echo '<p>[spacescoop code="..." lang="..."]</p>';
         echo '<p>Entrambi i parametri sono obbligatori per il corretto funzionamento dello shortcode.</p>';
+	echo '<h3>Griglia di libri</h3>';
+        echo '<p>Il plugin aggiunge anche uno shortcode che genera una griglia. Esistono due distinte versioni: lo shortcode generico:</p>';
+        echo '<p>[grigliaeduinaf categoria="..." etichetta="..."]</p>';
+        echo '<p>in cui almeno uno dei due parametri deve essere specificato.</p>';
+        echo '<p>Il secondo shortcode, invece, genera una griglia appositamente per i libri:</p>';
+        echo '<p>[griglialibri etichetta="..."]</p>';
+        echo '<p>dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni</p>';
 	echo '</div>';
 }
 
