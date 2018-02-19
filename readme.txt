@@ -38,6 +38,13 @@ Il secondo shortcode, invece, genera una griglia appositamente per i libri:
 dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni
 
 == Changelog ==
+* 2018.0219 modifiche nei *loop* e nelle griglie e aggiunta di campi personalizzati:
+  * cancellazione della griglia precedente
+  * creazione di una griglia per un *loop* generico
+  * creazione della griglia per i libri
+  * creazione degli *shortcode* corrispondenti
+  * creazione di un *metabox* per l'aggiunta del titolo di un libro e dell'url della sua copertina
+  * aggiunta in grid.php del codice per sostituire, se presente, il titolo del libro con il titolo del post nel caso della griglia di libri
 * 2018.0217 aggiunto un *loop* personalizzato:
   * aggiunto uno *shortcode* che mostra tutti i post dati una categoria e un'etichetta: di default sono rispettivamente 'libri' e 'libri-per-bambini-e-ragazzi'
   * incluso il css per la griglia
