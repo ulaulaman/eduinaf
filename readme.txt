@@ -50,7 +50,7 @@ dove il parametro etichetta è, al momento, settato di default sul valore "libri
   * incluso il css per la griglia
 * 2018.0214 aggiunti colori ai *link*
 * 2018.0212 aggiunto shortcode per articoli tratti da Sapere
-* 2018.02.11 semplificazioni del codice e nuova numerazione:
+* 2018.0211 semplificazioni del codice e nuova numerazione:
   * crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode dei link*
 * 0.9.6 test per wp 4.9.4
 * 0.9.5 test per wp 4.9.3
