@@ -48,7 +48,7 @@ add_shortcode ( 'grigliaeduinaf', 'grigliaeduinaf');
 		$grid = $grid.'<li class="grid-item"><span class="grid-border"><a href="'.get_the_permalink().'">'.$thumb.'</a><h4>'.get_the_title().'</h4></span></li>';
 	}
 	$grid = $grid.'</ul>';
-	/* ripristino */
+	# ripristino ricerca
 	wp_reset_postdata();
    } else {
 	$grid = '<p><strong>Nessun articolo trovato</strong></p>';
@@ -80,10 +80,14 @@ add_shortcode( 'griglialibri', 'griglialibri' );
    if ( $q->have_posts() ) {
 	while ( $q->have_posts() ) {
 		$q->the_post();
-                # https://wordpress.stackexchange.com/questions/13074/pull-custom-fields-from-custom-posts-within-a-loop
+		
+		# recupero dei valori dei campi personalizzati definiti in metabox.php
+                # guida: https://wordpress.stackexchange.com/questions/13074/pull-custom-fields-from-custom-posts-within-a-loop
                 $customtitlevalue = get_post_meta($post->ID, "meta-titolo", true);
                 $customimgvalue = get_post_meta($post->ID, "meta-urlcover", true);
                 $thumb = get_the_post_thumbnail($post->ID, 'thumbnail');
+		
+		# ciclo if che sostituisce, se presente, il titolo del post con il titolo del libro
                 if ( $customtitlevalue <> 'null') {
                   $titolo = $customtitlevalue;
                 }
@@ -91,17 +95,10 @@ add_shortcode( 'griglialibri', 'griglialibri' );
                 {
                   $titolo = get_the_title();
                 }
-                #if ( $customimgvalue <> 'null') {
-                #  $thumb = '<img src="'.$customimgvalue.' />';
-                #}
-                #else
-                #{
-                #  $thumb = get_the_post_thumbnail($post->ID, 'thumbnail');
-                #}
 		$grid = $grid.'<li class="grid-item"><a href="'.get_the_permalink().'">'.$thumb.'</a><h4>'.$titolo.'</h4></li>';
 	}
 	$grid = $grid.'</ul>';
-	/* ripristino */
+	# ripristino ricerca
 	wp_reset_postdata();
    } else {
 	$grid = '<p><strong>Nessun articolo trovato</strong></p>';
