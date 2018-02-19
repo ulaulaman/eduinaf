@@ -11,6 +11,7 @@ Il plugin, in italiano, aggiunge varie funzionalità al sito Edu INAF senza modi
 
 == Description ==
 Il plugin è stato originariamente sviluppato per integrarsi con il plugin [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con il plugin sono stati cancellati dalla versione attuale e spostati nel plugin [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del plugin](https://ulaulaman.github.io/widget-for-co-authors/)).
+
 Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin footer*, manipola il *feed rss* per accreditare l'articolo all'autore/i, inclusi *guest author* (**Attenzione**: la manipolazione del *feed* funziona solo con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/) installato), aggiunge degli shortcode per la creazione automatica dei link alle attività astroedu e alle notizie spacescoop. In particolare entrambi gli shortcode utilizzano due parametri, il codice dell'attività/news e la lingua.
 
 [astroedu code="..." lang="..."]
@@ -24,6 +25,17 @@ Il plugin, inoltre, aggiunge uno shortcode per la creazione di un *loop* di post
 [eduinafgrid categoriaeduinaf="..." tageduinaf="..."]
 
 Se non specificati, i valori di categoria e tag sono di *default* rispettivamente a 'libri' e 'libri-per-bambini-e-ragazzi'.
+
+Il plugin aggiunge anche uno shortcode che genera una griglia. Esistono due distinte versioni: lo shortcode generico:
+
+[grigliaeduinaf categoria="..." etichetta="..."]
+
+in cui almeno uno dei due parametri deve essere specificato.
+Il secondo shortcode, invece, genera una griglia appositamente per i libri:
+
+[griglialibri etichetta="..."]
+
+dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni
 
 == Changelog ==
 * 2018.0217 aggiunto un *loop* personalizzato:
