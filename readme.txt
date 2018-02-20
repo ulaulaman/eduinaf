@@ -20,12 +20,6 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 
 Entrambi i parametri sono obbligatori per il corretto funzionamento degli shortcode.
 
-Il plugin, inoltre, aggiunge uno shortcode per la creazione di un *loop* di post, mostrati nel formato griglia:
-
-[eduinafgrid categoriaeduinaf="..." tageduinaf="..."]
-
-Se non specificati, i valori di categoria e tag sono di *default* rispettivamente a 'libri' e 'libri-per-bambini-e-ragazzi'.
-
 Il plugin aggiunge anche uno shortcode che genera una griglia. Esistono due distinte versioni: lo shortcode generico:
 
 [grigliaeduinaf categoria="..." etichetta="..."]
