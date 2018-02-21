@@ -13,22 +13,16 @@ Entrambi i parametri sono obbligatori per il corretto funzionamento degli shortc
 
 ### Griglie per i *loop*
 
-Il plugin, inoltre, aggiunge uno shortcode per la creazione di un *loop* di post, mostrati nel formato griglia:
-
-[eduinafgrid categoriaeduinaf="..." tageduinaf="..."]
-
-Se non specificati, i valori di categoria e tag sono di *default* rispettivamente a 'libri' e 'libri-per-bambini-e-ragazzi'.
-
-Il plugin aggiunge anche uno shortcode che genera una griglia. Esistono due distinte versioni: lo shortcode generico:
+Il plugin aggiunge anche uno *shortcode* che genera una griglia. Esistono due distinte versioni: lo *shortcode* generico:
 
 [grigliaeduinaf categoria="..." etichetta="..."]
 
 in cui almeno uno dei due parametri deve essere specificato.
-Il secondo shortcode, invece, genera una griglia appositamente per i libri:
+Il secondo *shortcode*, invece, genera una griglia appositamente per i libri:
 
 [griglialibri etichetta="..."]
 
-dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni
+dove il parametro etichetta è, al momento, settato di *default* sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni
 
 ## Changelog
 * 2018.0219 modifiche nei *loop* e nelle griglie e aggiunta di campi personalizzati:
