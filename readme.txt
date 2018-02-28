@@ -29,9 +29,13 @@ Il secondo shortcode, invece, genera una griglia appositamente per i libri:
 
 [griglialibri etichetta="..."]
 
-dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni
+dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni.
+
+Sono anche presenti una serie di *shortcode* che permettono la visualizzazione dei campi creati appositamente per le attività didattiche utilizzando [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/)
 
 == Changelog ==
+* 2018.0228 incluso il file shortcode.php
+  * aggiunge una serie di *shortcode* compatibili con i campi creati con [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/) e associati con le attività didattiche, tipologia di post creata con [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
 * 2018.0219 modifiche nei *loop* e nelle griglie e aggiunta di campi personalizzati:
   * cancellazione della griglia precedente
   * creazione di una griglia per un *loop* generico
