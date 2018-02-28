@@ -2,7 +2,7 @@
 /*
 Plugin Name: Edu INAF Tools
 Description: Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
-Version: 2018.0219
+Version: 2018.0228
 Author: Gianluigi Filippelli
 Author URI: http://dropseaofulaula.blogspot.it/
 Plugin URI: https://ulaulaman.github.io/eduinaf/
@@ -24,6 +24,8 @@ require_once( EDUINAF__PLUGIN_DIR . 'link/link.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'incl/metabox.php' );
 # creazione di un loop con griglia
 require_once( EDUINAF__PLUGIN_DIR . 'incl/grid.php' );
+# attività didattiche
+require_once( EDUINAF__PLUGIN_DIR . 'didattica/shortcode.php' );
 
 # messaggio nell'admin footer
 function remove_footer_admin () {
