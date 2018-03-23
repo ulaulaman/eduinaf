@@ -33,7 +33,17 @@ dove il parametro etichetta è, al momento, settato di default sul valore "libri
 
 Sono anche presenti una serie di *shortcode* che permettono la visualizzazione dei campi creati appositamente per le attività didattiche utilizzando [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/)
 
+Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In particolare i due *shortcode* hanno la seguente sintassi:
+
+[grigliaspeciali speciale="slug speciale"]
+
+[specialieduinaf speciale="slug speciale" titolo="nome speciale"]
+
 == Changelog ==
+* 2018.0323 aggiunte funzionalità per gli Speciali
+  * aggiunta una tassonomia specifica per includere gli articoli in un dato speciale
+  * aggiunti due shortcode per la pubblicazione di un box all'interno degli articoli e di una griglia nella pagina di un dato speciale
+  * aggiunto un css per la personalizzazione del box da utilizzare in futuro anche per le tabelle degli eventi
 * 2018.0228 incluso il file shortcode.php
   * aggiunge una serie di *shortcode* compatibili con i campi creati con [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/) e associati con le attività didattiche, tipologia di post creata con [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
 * 2018.0219 modifiche nei *loop* e nelle griglie e aggiunta di campi personalizzati:
