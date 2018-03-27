@@ -40,6 +40,7 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 [specialieduinaf speciale="slug speciale" titolo="nome speciale"]
 
 == Changelog ==
+* 2018.0327 Corretto errore nel *path* di speciali.css
 * 2018.0323 aggiunte funzionalità per gli Speciali
   * aggiunta una tassonomia specifica per includere gli articoli in un dato speciale
   * aggiunti due shortcode per la pubblicazione di un box all'interno degli articoli e di una griglia nella pagina di un dato speciale
