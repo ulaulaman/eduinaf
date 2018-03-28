@@ -30,13 +30,16 @@ Sono anche presenti una serie di *shortcode* che permettono la visualizzazione d
 
 ### Speciali
 
-Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In particolare i due *shortcode* hanno la seguente sintassi:
+Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In particolare i due *shortcode* hanno la seguente sintassi:
 
-* Griglia da inserire nella pagin dello speciale: [grigliaspeciali speciale="slug speciale"]
-* Box da inserire negli articoli dello speciale con il sommario completo: [specialieduinaf speciale="slug speciale" titolo="nome speciale"]
+* Griglia da inserire nella pagina dello Speciale: [grigliaspeciali speciale="slug speciale"]
+* Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [specialishort speciale="slug speciale"]
 
 ## Changelog
-* 2018.0327 Corretto errore nel *path* di speciali.css
+* 2018.0328 varie modifiche agli *shortcode* per la gestione degli Speciali
+  * sostituito lo *shortcode* per la creazione della talebba degli articoli di uno speciale con uno con un controllo interno, utilizzabile direttamente in un *widget* di testo
+  * modifiche minori alla griglia
+* 2018.0327 corretto errore nel *path* di speciali.css
 * 2018.0323 aggiunte funzionalità per gli Speciali
   * aggiunta una tassonomia specifica per includere gli articoli in un dato speciale
   * aggiunti due shortcode per la pubblicazione di un box all'interno degli articoli e di una griglia nella pagina di un dato speciale
