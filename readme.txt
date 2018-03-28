@@ -37,10 +37,13 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 
 [grigliaspeciali speciale="slug speciale"]
 
-[specialieduinaf speciale="slug speciale" titolo="nome speciale"]
+[specialishort speciale="slug speciale"]
 
 == Changelog ==
-* 2018.0327 Corretto errore nel *path* di speciali.css
+* 2018.0328 varie modifiche agli *shortcode* per la gestione degli Speciali
+  * sostituito lo *shortcode* per la creazione della talebba degli articoli di uno speciale con uno con un controllo interno, utilizzabile direttamente in un *widget* di testo
+  * modifiche minori alla griglia
+* 2018.0327 corretto errore nel *path* di speciali.css
 * 2018.0323 aggiunte funzionalità per gli Speciali
   * aggiunta una tassonomia specifica per includere gli articoli in un dato speciale
   * aggiunti due shortcode per la pubblicazione di un box all'interno degli articoli e di una griglia nella pagina di un dato speciale
