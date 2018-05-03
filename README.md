@@ -36,6 +36,7 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 * Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [specialishort speciale="slug speciale"]
 
 ## Changelog
+* 2018.0503 modifica minore per sistemare la tabella degli articoli di uno Speciale nella spalla
 * 2018.0328 varie modifiche agli *shortcode* per la gestione degli Speciali
   * sostituito lo *shortcode* per la creazione della talebba degli articoli di uno speciale con uno con un controllo interno, utilizzabile direttamente in un *widget* di testo
   * modifiche minori alla griglia
