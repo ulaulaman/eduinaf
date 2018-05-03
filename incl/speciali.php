@@ -85,7 +85,7 @@ function specialishort($atts) {
 	
 	if ($nomespeciale <> $speciale) { $content = null; } else {
 		$q = new WP_Query( array( 'speciali' => $speciale, 'posts_per_page'=>-1 ) );
-		$content = '<p>';
+		$header = '<div class="divTable paleBlueRows"><div class="divTableHeading"><div class="divTableRow"><div class="divTableHead"><strong>Speciale '.$speciale.'</strong></div></div></div>';
 		
 		if ( $q->have_posts() ) {
 			while ( $q->have_posts() ) {
@@ -98,14 +98,15 @@ function specialishort($atts) {
 				}
 				$estratto = get_the_excerpt();
 				
-				$header = '<div class="divTable paleBlueRows"><div class="divTableHeading"><div class="divTableRow"><div class="divTableHead"><strong>Speciale '.$speciale.'</strong></div></div></div>';
-				$content .= $header.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><a href="'.get_the_permalink().'" style="color: #1d71b8;">'.$titolo.'</a></div></div></div></div>';
+				$content .= '<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><a href="'.get_the_permalink().'" style="color: #1d71b8;">'.$titolo.'</a></div></div></div>';
 			}
 			$content = $content.'</p>';
 			/* ripristino */
 			wp_reset_postdata();
 		}
 	}
+	
+	$content = '<p>'.$header.$content.'</div></p>';
 	
 	return $content;
 }
