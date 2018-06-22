@@ -1,3 +1,4 @@
+<?php
 #griglia per la home page
 add_shortcode ( 'grigliaevidenza', 'grigliaevidenza');
 
