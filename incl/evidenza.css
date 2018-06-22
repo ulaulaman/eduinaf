@@ -1,0 +1,24 @@
+.evidenza {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.evidenza > div.up {
+  width: 94%;
+  margin: 3%;
+  text-align: center;
+  border-bottom: 10px solid white;
+}
+
+.evidenza > div {
+  width: 23%;
+  margin: 1%;
+/*  line-height: 75px; */
+  text-align: center;
+/*  border-style: solid;
+  border-color: #1d71b8; */
+}
+
+.titoloevidenza {
+  background-color: #f1f1f1;
+}
