@@ -40,7 +40,7 @@ add_action( 'wp_enqueue_scripts', 'edu_inaf_table' );
 
 # inclusione di css personalizzato per la griglia in home
  function edu_inaf_evidenza () {
-   wp_register_style( 'evidenza', plugins_url( 'eduinaf-dev/incl/evidenza.css' ) );
+   wp_register_style( 'evidenza', plugins_url( 'eduinaf/incl/evidenza.css' ) );
    wp_enqueue_style( 'evidenza' );
  }
 
