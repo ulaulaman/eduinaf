@@ -20,18 +20,19 @@ Il plugin aggiunge un'icona per il login, personalizza il messaggio nell'*admin 
 
 Entrambi i parametri sono obbligatori per il corretto funzionamento degli shortcode.
 
-Il plugin aggiunge anche uno shortcode che genera una griglia. Esistono due distinte versioni: lo shortcode generico:
+Il plugin aggiunge degli *shortcode* per generare delle griglia di *post*. Si può utilizzare uno shortcode generico:
 
 [grigliaeduinaf categoria="..." etichetta="..."]
 
 in cui almeno uno dei due parametri deve essere specificato.
-Il secondo shortcode, invece, genera una griglia appositamente per i libri:
+Un altro shortcode genera una griglia appositamente per i libri:
 
 [griglialibri etichetta="..."]
 
 dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni.
+Per la homepage si può adottare lo shortcode [grigliaevidenza] che prende gli articoli in evidenza identificati con apposita tassonomia creata con il *plugin* esterno [CPT UI](https://wordpress.org/plugins/custom-post-type-ui/).
 
-Sono anche presenti una serie di *shortcode* che permettono la visualizzazione dei campi creati appositamente per le attività didattiche utilizzando [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/)
+Sono anche presenti una serie di *shortcode* che permettono la visualizzazione dei campi creati appositamente per le attività didattiche utilizzando [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/).
 
 Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In particolare i due *shortcode* hanno la seguente sintassi:
 
@@ -40,6 +41,9 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 [specialishort speciale="slug speciale"]
 
 == Changelog ==
+* 2018.0622
+  * creazione di una griglia per la home per mostrare gli articoli in evidenza con una tassonomia personalizzata creata con plugin esterno
+  * creazione del css della griglia della home
 * 2018.0503 modifica minore per sistemare la tabella degli articoli di uno Speciale nella spalla
 * 2018.0328 varie modifiche agli *shortcode* per la gestione degli Speciali
   * sostituito lo *shortcode* per la creazione della talebba degli articoli di uno speciale con uno con un controllo interno, utilizzabile direttamente in un *widget* di testo
