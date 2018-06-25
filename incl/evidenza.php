@@ -26,7 +26,7 @@ add_shortcode ( 'grigliaevidenza', 'grigliaevidenza');
 	while ( $q0->have_posts() ) {
 		$q0->the_post();
                 $thumb = get_the_post_thumbnail($post->ID, 'full');
-		$gridup = $gridup.'<div class="up"><span class="grid-border">'.$thumb.'<h4 class="titoloevidenza"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4></span></div>';
+		$gridup = $gridup.'<div class="up"><span class="grid-border"><a href="'.get_the_permalink().'">'.$thumb.'</a><h4><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4></span></div>';
 	}
 	$gridup = $gridup.'</div>';
 	/* ripristino */
@@ -41,7 +41,7 @@ add_shortcode ( 'grigliaevidenza', 'grigliaevidenza');
 	while ( $q->have_posts() ) {
 		$q->the_post();
                 $thumb = get_the_post_thumbnail($post->ID, 'thumbnail');
-		$grid = $grid.'<div><span class="grid-border">'.$thumb.'<h4 class="titoloevidenza"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4></span></div>';
+		$grid = $grid.'<div><span class="grid-border"><a href="'.get_the_permalink().'">'.$thumb.'</a><h4><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4></span><div class="entry-meta" style="padding: 10px;"><time class="entry-date">'.get_the_date().'</time></div></div>';
 	}
 	$grid = $grid.'</div>';
 	/* ripristino */
