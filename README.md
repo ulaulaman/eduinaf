@@ -41,6 +41,7 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
   * aggiunto il permalink sull'immagine in evidenza
   * tolta la classe del titolo
   * aggiunta la data con la classe del tema
+  * modifiche minori di ordine grafico
 * 2018.0622
   * creazione di una griglia per la home per mostrare gli articoli in evidenza con una tassonomia personalizzata creata con plugin esterno
   * creazione del css della griglia della home
