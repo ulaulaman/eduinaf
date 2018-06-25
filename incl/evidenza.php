@@ -28,7 +28,7 @@ add_shortcode ( 'grigliaevidenza', 'grigliaevidenza');
                 $thumb = get_the_post_thumbnail($post->ID, 'full');
 		$gridup = $gridup.'<div class="up"><span class="grid-border"><a href="'.get_the_permalink().'">'.$thumb.'</a><h4><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4></span></div>';
 	}
-	$gridup = $gridup.'</div>';
+	$gridup = $gridup.'</div><p></p>';
 	/* ripristino */
 	wp_reset_postdata();
    } else {
