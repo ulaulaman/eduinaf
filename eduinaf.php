@@ -2,7 +2,7 @@
 /*
 Plugin Name: Edu INAF Tools
 Description: Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
-Version: 2018.0625
+Version: 2020.0706
 Author: Gianluigi Filippelli
 Author URI: http://dropseaofulaula.blogspot.it/
 Plugin URI: https://ulaulaman.github.io/eduinaf/
@@ -16,8 +16,6 @@ define( 'EDUINAF__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 require_once( EDUINAF__PLUGIN_DIR . 'incl/menu.php' );
 # manipolazione feed
 require_once( EDUINAF__PLUGIN_DIR . 'incl/feed.php' );
-# contacaratteri
-require_once( EDUINAF__PLUGIN_DIR . 'incl/conta.php' );
 # creazione link: astroedu, spacescoop
 require_once( EDUINAF__PLUGIN_DIR . 'link/link.php' );
 # metabox per campi aggiuntivi sui libri
@@ -28,8 +26,6 @@ require_once( EDUINAF__PLUGIN_DIR . 'incl/grid.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'incl/evidenza.php' );
 # Speciali
 require_once( EDUINAF__PLUGIN_DIR . 'incl/speciali.php' );
-# attività didattiche
-require_once( EDUINAF__PLUGIN_DIR . 'didattica/shortcode.php' );
 
 # inclusione di css personalizzato per tabella
  function edu_inaf_table () {
@@ -55,7 +51,7 @@ add_filter('admin_footer_text', 'remove_footer_admin');
 # Aggiunta del logo e modifica del link nella pagina di login
 function custom_login_logo() {
 	echo '<style type="text/css">
-	h1 a { background-image: url('.plugin_dir_url( __FILE__ ).'images/avatar_eduinaf.png) !important; }
+	h1 a { background-image: url('.plugin_dir_url( __FILE__ ).'images/avatar_eduinaf_blu.png) !important; }
 	</style>';
 }
 add_action('login_head', 'custom_login_logo');
