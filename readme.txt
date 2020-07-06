@@ -41,6 +41,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 [specialishort speciale="slug speciale"]
 
 == Changelog ==
+* 2020.0706
+  * disabilitato contacaratteri (in conflitto con plugin che incorpora il google calendar)
+  * disabilitati shortcode della didattica
+  * nuovo avatar di login
 * 2018.0625
   * aggiunto il permalink sull'immagine in evidenza
   * tolta la classe del titolo
