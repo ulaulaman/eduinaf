@@ -37,6 +37,8 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 * Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [specialishort speciale="slug speciale"]
 
 ## Changelog
+* 2020.0707
+  * aggiunta compatibilità con Wordpress 4.9.5
 * 2020.0706
   * disabilitato contacaratteri (in conflitto con plugin che incorpora il google calendar)
   * disabilitati shortcode della didattica

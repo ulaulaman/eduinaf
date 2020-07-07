@@ -2,7 +2,7 @@
 Contributors: ulaulaman
 Tags: eduinaf, inaf
 Requires at least: 4.8.5
-Tested up to: 4.9.4
+Tested up to: 4.9.5
 Requires PHP: 7.0.18
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -41,6 +41,8 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 [specialishort speciale="slug speciale"]
 
 == Changelog ==
+* 2020.0707
+  * aggiunta compatibilità con Wordpress 4.9.5
 * 2020.0706
   * disabilitato contacaratteri (in conflitto con plugin che incorpora il google calendar)
   * disabilitati shortcode della didattica
