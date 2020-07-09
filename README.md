@@ -25,10 +25,6 @@ Un altro *shortcode* genera una griglia appositamente per i libri:
 dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni.
 Per la *homepage* si può adottare lo *shortcode* [grigliaevidenza] che prende gli articoli in evidenza identificati con apposita tassonomia creata con il *plugin* esterno [CPT UI](https://wordpress.org/plugins/custom-post-type-ui/).
 
-### Attività didattiche
-
-Sono anche presenti una serie di *shortcode* che permettono la visualizzazione dei campi creati utilizzando [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/) e in uso dalle attività didattiche create con [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/).
-
 ### Speciali
 
 Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In particolare i due *shortcode* hanno la seguente sintassi:
@@ -37,11 +33,13 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 * Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [specialishort speciale="slug speciale"]
 
 ## Changelog
+* 2020.0709
+  * estesi gli speciali anche a videolezioni e alla nuova tipologia astrodidattica
 * 2020.0707
   * aggiunta compatibilità con Wordpress 4.9.5
 * 2020.0706
   * disabilitato contacaratteri (in conflitto con plugin che incorpora il google calendar)
-  * disabilitati shortcode della didattica
+  * disabilitati *shortcode* della didattica
   * nuovo avatar di login
 * 2018.0625
   * aggiunto il permalink sull'immagine in evidenza
@@ -58,9 +56,9 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 * 2018.0327 corretto errore nel *path* di speciali.css
 * 2018.0323 aggiunte funzionalità per gli Speciali
   * aggiunta una tassonomia specifica per includere gli articoli in un dato speciale
-  * aggiunti due shortcode per la pubblicazione di un box all'interno degli articoli e di una griglia nella pagina di un dato speciale
+  * aggiunti due *shortcode* per la pubblicazione di un box all'interno degli articoli e di una griglia nella pagina di un dato speciale
   * aggiunto un css per la personalizzazione del box da utilizzare in futuro anche per le tabelle degli eventi
-* 2018.0228 incluso il file shortcode.php:
+* 2018.0228 incluso il file shortcode.php
   * aggiunge una serie di *shortcode* compatibili con i campi creati con [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/) e associati con le attività didattiche, tipologia di post creata con [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
 * 2018.0219 modifiche nei *loop* e nelle griglie e aggiunta di campi personalizzati:
   * cancellazione della griglia precedente
@@ -74,24 +72,24 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
   * incluso il css per la griglia
 * 2018.0214 aggiunti colori ai *link*
 * 2018.0212 aggiunto *shortcode* per articoli tratti da Sapere
-* 2018.02.11 semplificazioni del codice e nuova numerazione:
-  * crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode dei link*
+* 2018.0211 semplificazioni del codice e nuova numerazione:
+  * crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode* dei *link*
 * 0.9.6 test per wp 4.9.4
 * 0.9.5 test per wp 4.9.3
 * 0.9.4 aggiunto il Plugin URI
 * 0.9.3 aggiunto il GitHub Plugin URI per l'installazione e l'aggiornamento tramite il GitHub Updater
 * 0.9.2 modifiche alla pagina di documentazione; pulizia nella cartella principale
-* 0.9.1 aggiunta shortcode per i link a spacescoop usando codice e lingua della news
-* 0.9 aggiunta shortcode per i link ad astroEdu usando codice e lingua dell'attività
-* 0.8.1 cancellazione di shortcode e widget integrati con Co-Authors Plus a seguito della creazione di plugin apposito
+* 0.9.1 aggiunta *shortcode* per i *link* a spacescoop usando codice e lingua della news
+* 0.9 aggiunta *shortcode* per i *link* ad astroEdu usando codice e lingua dell'attività
+* 0.8.1 cancellazione di *shortcode* e *widget* integrati con Co-Authors Plus a seguito della creazione di plugin apposito
 * 0.8 aggiunte le attività didattiche al feed rss
 * 0.7.2 aggiunto contacaratteri per gli articoli
 * 0.7.1 aggiunto contacaratteri per il riassunto con limite a 500
 * 0.6.2 correzione codice che mostrava articoli completi sostituendolo con il sommario
 * 0.6.1 correzione baco che impediva di mostrare i profili tranne il primo
-* 0.6 aggiunto metodo per mostrare/nascondere profilo nel widget con css
-* 0.5 manipolazione del footer admin della dashboard; manipolazione del feed rss: aggiunta immagine in evidenza e autori articolo; aggiunto il logo e modificati descrizione e link
+* 0.6 aggiunto metodo per mostrare/nascondere profilo nel *widget* con css
+* 0.5 manipolazione del footer admin della dashboard; manipolazione del feed rss: aggiunta immagine in evidenza e autori articolo; aggiunto il logo e modificati descrizione e *link*
 * 0.4 aggiunta della voce del menu e della pagina di presentazione del plugin
-* 0.3 aggiunta dei link ai profili nel widget
-* 0.2 widget per gli avatar degli autori compatibile con Coauthors Plus
-* 0.1 box shortcode per aggiunta autori compatibile con Coauthors Plus
+* 0.3 aggiunta dei *link* ai profili nel *widget*
+* 0.2 *widget* per gli *avatar* degli autori compatibile con Coauthors Plus
+* 0.1 *shortcode* per aggiunta autori compatibile con Coauthors Plus
