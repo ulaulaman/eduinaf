@@ -14,7 +14,7 @@ function speciali_tax() {
 
 	register_taxonomy(
 		'speciali',
-		array('post'), /* per estendere array('post','page','custom-post-type') */
+		array('post','astrodidattica','videolezione'), /* per estendere array('post','page','custom-post-type') */
 		array(
 			'hierarchical' => true,
 			'labels' => $labels,
