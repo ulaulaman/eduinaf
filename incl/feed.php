@@ -1,9 +1,9 @@
 <?php
 # manipolazione feed rss
-# aggiunta delle attività didattiche
+# aggiunta post personalizzati
 function myfeed_request($qv) {
     if (isset($qv['feed']) && !isset($qv['post_type']))
-        $qv['post_type'] = array('post', 'attivita_didattica');
+        $qv['post_type'] = array('post', 'costellazioni', 'astrofoto');
     return $qv;
 }
 add_filter('request', 'myfeed_request');
