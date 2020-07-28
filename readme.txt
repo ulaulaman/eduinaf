@@ -39,6 +39,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 [specialishort speciale="slug speciale"]
 
 == Changelog ==
+* 2020.0728
+  * aggiunte immagini per i livelli didattici nella cartella "images"
+  * aggiunte costellazioni e astrofoto al *feed*, tolte attività didattiche
+  * tolte le videolezioni dagli speciali
 * 2020.0709
   * estesi gli speciali anche a videolezioni e alla nuova tipologia astrodidattica
 * 2020.0707
