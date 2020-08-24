@@ -51,9 +51,12 @@ function grigliaspeciali($atts) {
 			} else {$autori = the_author();}
 			
 			$estratto = get_the_excerpt();
+
+			/* griglia con titolo ed estratto: stilizzazione minimale */
 			$header = '<h4 style="color: #ecb252;">'.$titolo.'</h4>';
 			$content .= $header.'<p><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</p><hr/>';
 
+			/* griglia con titolo ed estratto: formato tabella */
 			$headerblu = '<div class="divTableHeading"><div class="divTableRow"><div class="divTableHead">'.$titolo.'</div></div></div>';
 			$contentblu .= '<div class="divTable paleBlueRows">'.$headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div>';
 		}
