@@ -51,16 +51,20 @@ function grigliaspeciali($atts) {
 			} else {$autori = the_author();}
 			
 			$estratto = get_the_excerpt();
-			$header = '<h4 style="color: #ecb252;">'.$titolo.'</h4><hr/>';
-			$content .= $header.'<p><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</p>';
+			$header = '<h4 style="color: #ecb252;">'.$titolo.'</h4>';
+			$content .= $header.'<p><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</p><hr/>';
+
+			$headerblu = '<div class="divTableHeading"><div class="divTableRow"><div class="divTableHead">'.$titolo.'</div></div></div>';
+			$contentblu = '<div class="divTable paleBlueRows">'.$headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div></div></div>';
 		}
 		
 		$content = $content.'</p>';
+		
 		/* ripristino */
 		wp_reset_postdata();
 	}
 	
-	return $content;
+	return $contentblu;
 }
 add_shortcode( 'grigliaspeciali', 'grigliaspeciali' );
 
