@@ -55,10 +55,11 @@ function grigliaspeciali($atts) {
 			$content .= $header.'<p><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</p><hr/>';
 
 			$headerblu = '<div class="divTableHeading"><div class="divTableRow"><div class="divTableHead">'.$titolo.'</div></div></div>';
-			$contentblu = '<div class="divTable paleBlueRows">'.$headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div></div></div>';
+			$contentblu .= '<div class="divTable paleBlueRows">'.$headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div>';
 		}
 		
 		$content = $content.'</p>';
+		$contentblu = $contentblu.'</div></div>';
 		
 		/* ripristino */
 		wp_reset_postdata();
