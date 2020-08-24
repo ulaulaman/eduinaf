@@ -41,6 +41,7 @@ function grigliaspeciali($atts) {
 	
 	$q = new WP_Query( array( 'speciali' => $speciale, 'posts_per_page'=>-1 ) );
 	$content = '<p>';
+	$contentblu ='<div class="divTable paleBlueRows">';
 	
 	if ( $q->have_posts() ) {
 		while ( $q->have_posts() ) {
@@ -58,11 +59,11 @@ function grigliaspeciali($atts) {
 
 			/* griglia con titolo ed estratto: formato tabella */
 			$headerblu = '<div class="divTableHeading"><div class="divTableRow"><div class="divTableHead">'.$titolo.'</div></div></div>';
-			$contentblu .= '<div class="divTable paleBlueRows">'.$headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div>';
+			$contentblu .= $headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div></div>';
 		}
 		
 		$content = $content.'</p>';
-		$contentblu = $contentblu.'</div></div>';
+		$contentblu = $contentblu.'</div>';
 		
 		/* ripristino */
 		wp_reset_postdata();
