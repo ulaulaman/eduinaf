@@ -33,6 +33,8 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 * Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [specialishort speciale="slug speciale"]
 
 ## Changelog
+* 2020.0824
+  * Modifca alla griglia degli speciali: adottata la tabella personalizzata
 * 2020.0728
   * aggiunte immagini per i livelli didattici nella cartella "images"
   * aggiunte costellazioni e astrofoto al *feed*, tolte attività didattiche
