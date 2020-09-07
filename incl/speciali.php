@@ -39,8 +39,7 @@ function grigliaspeciali($atts) {
 		)
 	);
 	
-	$q = new WP_Query( array( 'speciali' => $speciale, 'posts_per_page'=>-1 ) );
-	$content = '<p>';
+	$q = new WP_Query( array( 'speciali' => $speciale, 'post_type'=> 'post', 'posts_per_page'=>-1 ) );
 	$contentblu ='<div class="divTable paleBlueRows">';
 	
 	if ( $q->have_posts() ) {
@@ -55,14 +54,12 @@ function grigliaspeciali($atts) {
 
 			/* griglia con titolo ed estratto: stilizzazione minimale */
 			$header = '<h4 style="color: #ecb252;">'.$titolo.'</h4>';
-			$content .= $header.'<p><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</p><hr/>';
 
 			/* griglia con titolo ed estratto: formato tabella */
 			$headerblu = '<div class="divTableHeading"><div class="divTableRow"><div class="divTableHead">'.$titolo.'</div></div></div>';
 			$contentblu .= $headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div></div>';
 		}
 		
-		$content = $content.'</p>';
 		$contentblu = $contentblu.'</div>';
 		
 		/* ripristino */
@@ -109,7 +106,6 @@ function specialishort($atts) {
 				
 				$content .= '<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><a href="'.get_the_permalink().'" style="color: #1d71b8;">'.$titolo.'</a></div></div></div>';
 			}
-			$content = $content.'</p>';
 			/* ripristino */
 			wp_reset_postdata();
 		}
