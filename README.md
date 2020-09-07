@@ -33,6 +33,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 * Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [specialishort speciale="slug speciale"]
 
 ## Changelog
+* 2020.0907
+  * Correzione errore nel codice della tabella degli speciali (*shortcode specialishort*) che va nella spalla degli articoli
+  * Nella griglia degli speciali (*shortcode grigliaspeciali*), specificato di raccogliere solo gli articoli
+  * Cancellate righe di codice che si riferivano alla vecchia griglia
 * 2020.0824
   * Modifca alla griglia degli speciali: adottata la tabella personalizzata
 * 2020.0728
