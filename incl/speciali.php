@@ -70,6 +70,50 @@ function grigliaspeciali($atts) {
 }
 add_shortcode( 'grigliaspeciali', 'grigliaspeciali' );
 
+# nuovo shortcode per listare nella barra gli articoli di uno speciale
+function tabspeciali($atts) {
+	global $post;
+	
+	extract(
+		shortcode_atts(
+			array(
+				'speciale' => 'null',
+			),
+			$atts
+		)
+	);
+	
+	#tutti i termini associati all'eventuale speciale associato al post
+	$term_list = wp_get_post_terms($post->ID, 'speciali', array("fields" => "all"));
+	#estrazione del nome dello speciale associato al post
+	$nomespeciale = $term_list[0]->name;
+	
+	#if per determinare se l'articolo fa parte dello speciale; in caso positivo crea l'elenco
+	#usato lo stile del tema
+	if ($nomespeciale <> $speciale) { $content = null; } else {
+		$q = new WP_Query( array( 'speciali' => $speciale, 'posts_per_page'=>-1 ) );
+		$header = '<aside id="recent-posts-3" class="widget widget_recent_entries clearfix"><header><div class="title"><span>Gli articoli dello speciale '.$speciale.'</span></div></header><ul>';
+		
+		if ( $q->have_posts() ) {
+			while ( $q->have_posts() ) {
+				$q->the_post();
+				$titolo = get_the_title();
+				
+				$content .= '<li><a href="'.get_the_permalink().'" style="color: #1d71b8;">'.$titolo.'</a></li>';
+			}
+			/* ripristino */
+			wp_reset_postdata();
+		}
+	}
+	
+	$content = $header.'<br/>'.$content.'</ul></aside>';
+	
+	return $content;
+}
+add_shortcode( 'tabspeciali', 'tabspeciali' );
+
+/* Deprecrato in attesa di capire come realizzare uno stile che eviti errori nella barra laterale */
+
 #shortcode per mostrare in una tabella l'elenco degli articoli di uno speciale: da utilizzare in un widget di testo in attesa di creare un widget vero e proprio
 function specialishort($atts) {
 	
