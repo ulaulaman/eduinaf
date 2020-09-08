@@ -36,9 +36,12 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 
 [grigliaspeciali speciale="slug speciale"]
 
-[specialishort speciale="slug speciale"]
+[tabspeciali speciale="slug speciale"]
 
 == Changelog ==
+* 2020.0908
+  * Aggiunto bollino livello trasversale nella cartella delle immagini per sezione astrodidattica
+  * aggiunto lo *shortcode tabspeciali* che sostituirà lo *shortcode specialishort* che continua a produrre errore nella barra laterale in caso di inserimento di più speciali
 * 2020.0907
   * Correzione errore nel codice della tabella degli speciali (*shortcode specialishort*) che va nella spalla degli articoli
   * Nella griglia degli speciali (*shortcode grigliaspeciali*), specificato di raccogliere solo gli articoli

@@ -30,9 +30,12 @@ Per la *homepage* si può adottare lo *shortcode* [grigliaevidenza] che prende g
 Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In particolare i due *shortcode* hanno la seguente sintassi:
 
 * Griglia da inserire nella pagina dello Speciale: [grigliaspeciali speciale="slug speciale"]
-* Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [specialishort speciale="slug speciale"]
+* Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [tabspeciali speciale="slug speciale"]
 
 ## Changelog
+* 2020.0908
+  * Aggiunto bollino livello trasversale nella cartella delle immagini per sezione astrodidattica
+  * aggiunto lo *shortcode tabspeciali* che sostituirà lo *shortcode specialishort* che continua a produrre errore nella barra laterale in caso di inserimento di più speciali
 * 2020.0907
   * Correzione errore nel codice della tabella degli speciali (*shortcode specialishort*) che va nella spalla degli articoli
   * Nella griglia degli speciali (*shortcode grigliaspeciali*), specificato di raccogliere solo gli articoli
