@@ -1,0 +1,259 @@
+/* per griglia in evidenza */
+
+.evidenza {
+	display: flex;
+	flex-wrap: nowrap;
+	border-style: solid;
+	border-color: #f1f1f1;
+}
+
+.evidenza > div.up {
+	width: 94%;
+	margin: 3%;
+	text-align: center;
+}
+
+.evidenza > div {
+	width: 23%;
+	margin: 1%;
+}
+
+.titoloevidenza {
+  background-color: #f1f1f1;
+}
+
+.up img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 94%;
+	padding: 5px;
+}
+
+.evidenza > div img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 94%;
+	padding: 5px;
+}
+
+/* per griglia generica */
+
+.grid-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+}
+
+.grid-item {
+	flex-basis: 160px;
+	height: 250px;
+	padding: 5px;
+	margin: 10px;
+}
+
+.grid-item img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 160px;
+}
+
+.grid-wrap ul {
+	margin-left: 0;
+}
+
+/* tabella colorata */
+
+div.paleBlueRows {
+	border: 1px solid #FFFFFF;
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+  }
+  .divTable.paleBlueRows .divTableCell, .divTable.paleBlueRows .divTableHead {
+	border: 1px solid #D0E4F5;
+	padding: 3px 2px;
+  }
+  .divTable.paleBlueRows .divTableBody .divTableCell {
+	font-size: 15px;
+  }
+  .divTable.paleBlueRows .divTableHeading {
+	background: #1D71B8;
+	border-bottom: 2px solid #D0E4F5;
+  }
+  .divTable.paleBlueRows .divTableHeading .divTableHead {
+	font-size: 17px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align: center;
+	border-left: 2px solid #D0E4F5;
+  }
+  .divTable.paleBlueRows .divTableHeading .divTableHead:first-child {
+	border-left: none;
+  }
+  
+  .paleBlueRows .tableFootStyle {
+	font-size: 14px;
+  }
+  /* DivTable.com */
+  .divTable{ display: table; }
+  .divTableRow { display: table-row; }
+  .divTableHeading { display: table-header-group;}
+  .divTableCell, .divTableHead { display: table-cell;}
+  .divTableHeading { display: table-header-group;}
+  .divTableFoot { display: table-footer-group;}
+  .divTableBody { display: table-row-group;}
+
+  /*
+	Mappe inaf e irnet
+
+	Nota: le ripetizioni per ovviare
+	a un errore che impedisce di mostrare la mappa inaf
+  */
+
+	.mappainaf {
+		width:100%; position:relative; margin:20px 0 100px 0;
+	  }
+  
+	  .mappainaf img {
+		display:block; width:100%; border-radius:20px;
+	  }
+  
+	  .mappainaf a {
+		color: #1d71b8;
+	  }
+  
+	  .mappainaf box {
+		margin:0;
+		padding:0;
+		list-style:none;
+	  }
+  
+	  #luogoinaf {
+		font-family:arial, helvetica, sans-serif;
+		font-size:8pt;
+	  }
+  
+	  .mappainaf box luogoinaf {
+		position:absolute;
+		display:block;
+		background:url(https://edu.inaf.it/wp-content/plugins/eduinaf/images/blank.gif);
+	  }
+  
+	  .mappainaf box span { display:none; }
+  
+	  .mappainaf box luogoinaf:hover span {
+		position:relative;
+		display:block;
+		width:200px;
+		left:-20px;
+		top:-20px;
+		padding:5px;
+		border:1px solid #000;
+		border-radius: .25em .25em .25em .25em;
+		background:#fff;
+		text-decoration:none;
+		color:#000;
+		filter:alpha(opacity=80);
+		opacity:0.8;
+	  }
+  
+	  .mappainaf luogoinaf.torino {
+		left: 8.5%;
+		top: 18%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.milano {
+		left: 19.3%;
+		top: 14.5%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.padova {
+		left: 40.8%;
+		top: 14.5%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.trieste {
+		left: 54.3%;
+		top: 12%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.bologna {
+		left: 35.8%;
+		top: 22.5%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.firenze {
+		left: 35.8%;
+		top: 30.5%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.roma {
+		left: 46.1%;
+		top: 48%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.teramo {
+		left: 55.3%;
+		top: 41%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.napoli {
+		left: 58.8%;
+		top: 58%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.catania {
+		left: 66%;
+		top: 86%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.palermo {
+		left: 52.3%;
+		top: 82%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
+  
+	  .mappainaf luogoinaf.cagliari {
+		left: 19%;
+		top: 70.5%;
+		width: 6.7%;
+		height: 6.5%;
+		padding-bottom: 2.18%;
+	  }
