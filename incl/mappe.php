@@ -2,7 +2,7 @@
 
 # Mappa INAF
 
-add_shortcode( 'provamappainaf', function () {
+add_shortcode( 'mappainaf', function () {
 
 	$out = '<div class="mappainaf" aria-haspopup="true"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/mappa-italia-inaf.png" alt="" width="800" height="917" class="aligncenter size-full wp-image-4137" />
 <box><luogoinaf class="torino"><span><a href="../sedi-inaf/osservatorio-astrofisico-di-torino/">Osservatorio Astrofisico di Torino</a></span></luogoinaf></box>
