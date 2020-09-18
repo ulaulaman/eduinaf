@@ -33,9 +33,14 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 * Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [tabspeciali speciale="slug speciale"]
 
 ## Changelog
-* 2020.0908
-  * Aggiunto bollino livello trasversale nella cartella delle immagini per sezione astrodidattica
-  * aggiunto lo *shortcode tabspeciali* che sostituirà lo *shortcode specialishort* che continua a produrre errore nella barra laterale in caso di inserimento di più speciali
+* 2020.0919
+  * Pulizia codice speciali
+  * Eliminato il campo sull'url della copertina nel metabox dei dati aggiuntivi per i libri
+  * Pulizia codice griglia dei libri in funzione della cancellazione del campo del'url della copertina
+  * Accorpato tutto il css in un unico *file*, incluso il css delle mappe INAF
+  * Disabilitata la griglia di evidenza
+  * Aggiunta griglia generica per categoria, etichetta, tassonomia e suo valore
+  * Aggiunto shortcode per la mappa delle sedi INAF
 * 2020.0907
   * Correzione errore nel codice della tabella degli speciali (*shortcode specialishort*) che va nella spalla degli articoli
   * Nella griglia degli speciali (*shortcode grigliaspeciali*), specificato di raccogliere solo gli articoli
