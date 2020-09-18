@@ -16,9 +16,7 @@ function eduinaf_book_callback( $post ) {
  
     <p>
         <label for="meta-titolo" class="eduinaf-row-title"><?php _e( 'Inserisci il titolo del libro', 'eduinaf-textdomain' )?></label>
-        <input type="text" name="meta-titolo" id="meta-titolo" value="<?php if ( isset ( $eduinaf_stored_meta['meta-titolo'] ) ) echo $eduinaf_stored_meta['meta-titolo'][0]; ?>" /><br/>
-        <label for="meta-urlcover" class="eduinaf-row-urlcover"><?php _e( 'Inserisci l\'url della copertina', 'eduinaf-textdomain' )?></label>
-        <input type="text" name="meta-urlcover" id="meta-urlcover" value="<?php if ( isset ( $eduinaf_stored_meta['meta-urlcover'] ) ) echo $eduinaf_stored_meta['meta-urlcover'][0]; ?>" />
+        <input type="text" name="meta-titolo" id="meta-titolo" value="<?php if ( isset ( $eduinaf_stored_meta['meta-titolo'] ) ) echo $eduinaf_stored_meta['meta-titolo'][0]; ?>" />
     </p>
  
     <?php
@@ -37,12 +35,9 @@ function eduinaf_book_meta_save( $post_id ) {
         return;
     }
 
-    # controlla dell'input e sanitizza/salva se necessario
+    # controllo dell'input e sanitizza/salva se necessario
     if( isset( $_POST[ 'meta-titolo' ] ) ) {
         update_post_meta( $post_id, 'meta-titolo', sanitize_text_field( $_POST[ 'meta-titolo' ] ) );
-    }
-    if( isset( $_POST[ 'meta-urlcover' ] ) ) {
-        update_post_meta( $post_id, 'meta-urlcover', sanitize_text_field( $_POST[ 'meta-urlcover' ] ) );
     }
  
 }
