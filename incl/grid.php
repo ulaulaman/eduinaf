@@ -2,24 +2,24 @@
 # guide utilizzate: https://www.zenwebthemes.com/blog/create-grid-layout-wordpress-flexbox/
 # https://wordpress.stackexchange.com/questions/269671/wp-query-by-keyword-or-post-tag
 # inclusione di grid.css
- function edu_inaf_to_the_head () {
-   wp_register_style( 'grid', plugins_url( 'eduinaf/incl/grid.css' ) );
-   wp_enqueue_style( 'grid' );
- }
+# function edu_inaf_to_the_head () {
+#   wp_register_style( 'grid', plugins_url( 'eduinaf/incl/grid.css' ) );
+#   wp_enqueue_style( 'grid' );
+# }
+#
+#add_action( 'wp_enqueue_scripts', 'edu_inaf_to_the_head' );
 
-add_action( 'wp_enqueue_scripts', 'edu_inaf_to_the_head' );
-
-# griglia per loop generico
+# griglia per loop generico per categoria ed etichetta
 add_shortcode ( 'grigliaeduinaf', 'grigliaeduinaf');
 
  function grigliaeduinaf ($atts) {
    
    extract(
       shortcode_atts(
-         array( 
-		'categoria' => 'null',
-                'etichetta' => 'null',
-	 ),
+         array(
+           'categoria' => 'null',
+           'etichetta' => 'null',
+          ),
          $atts
       )
    );
@@ -58,7 +58,87 @@ add_shortcode ( 'grigliaeduinaf', 'grigliaeduinaf');
 
  }
 
-# creazione della griglia per il loop dei libri
+# griglia per loop generico per categoria, etichetta, tassonomia e suo valore
+add_shortcode ( 'grigliata', 'grigliata');
+
+ function grigliata ($atts) {
+   
+   extract(
+      shortcode_atts(
+         array(
+			 'categoria' => 'null',
+			 'etichetta' => 'null',
+			 'tassonomia' => 'null',
+			 'valore' => 'null',
+		 ),
+         $atts
+      )
+   );
+	 
+	 if ( $categoria <> 'null' ) {
+		 if ( $etichetta <> 'null' ) {
+			 if ( $tassonomia <> 'null' ) {
+				 if ( $valore <> 'null' ) {
+					 $qtax = new WP_Query ( array( 'category_name' => $categoria, 'tag' => $etichetta, 'taxonomy' => $tassonomia, 'term' => $valore, 'posts_per_page'=>-1 ) );
+				 } else {
+					 $qtax = new WP_Query ( array( 'category_name' => $categoria, 'tag' => $etichetta, 'taxonomy' => $tassonomia, 'posts_per_page'=>-1 ) );
+				 }
+			 } else {
+				 $qtax = new WP_Query ( array( 'category_name' => $categoria, 'tag' => $etichetta, 'posts_per_page'=>-1 ) );
+			 }
+		 } else {
+			 if ( $tassonomia <> 'null' ) {
+				 if ( $valore <> 'null' ) {
+					 $qtax = new WP_Query ( array( 'category_name' => $categoria, 'taxonomy' => $tassonomia, 'term' => $valore, 'posts_per_page'=>-1 ) );
+				 } else {
+					 $qtax = new WP_Query ( array( 'category_name' => $categoria, 'taxonomy' => $tassonomia, 'posts_per_page'=>-1 ) );
+				 }
+			 } else {
+				 $qtax = new WP_Query ( array( 'category_name' => $categoria, 'posts_per_page'=>-1 ) );
+			 }
+		 }
+	 } else {
+		 if ( $etichetta <> 'null' ) {
+			 if ( $tassonomia <> 'null' ) {
+				 if ( $valore <> 'null' ) {
+					 $qtax = new WP_Query ( array( 'tag' => $etichetta, 'taxonomy' => $tassonomia, 'term' => $valore, 'posts_per_page'=>-1 ) );
+				 } else {
+					 $qtax = new WP_Query ( array( 'tag' => $etichetta, 'taxonomy' => $tassonomia, 'posts_per_page'=>-1 ) );
+				 }
+			 } else {
+				 $qtax = new WP_Query ( array( 'tag' => $etichetta, 'posts_per_page'=>-1 ) );
+			 }
+		 } else {
+			 if ( $tassonomia <> 'null' ) {
+				 if ( $valore <> 'null' ) {
+					 $qtax = new WP_Query ( array( 'taxonomy' => $tassonomia, 'term' => $valore, 'posts_per_page'=>-1 ) );
+				 } else {
+					 $qtax = new WP_Query ( array( 'taxonomy' => $tassonomia, 'posts_per_page'=>-1 ) );
+				 }
+			 }
+		 }
+	 }
+
+   $grid = '<ul class="grid-wrap">';
+
+   if ( $qtax->have_posts() ) {
+	while ( $qtax->have_posts() ) {
+		$qtax->the_post();
+                $thumb = get_the_post_thumbnail($post->ID, 'thumbnail');
+		$grid = $grid.'<li class="grid-item"><span class="grid-border"><a href="'.get_the_permalink().'">'.$thumb.'</a><h4>'.get_the_title().'</h4></span></li>';
+	}
+	$grid = $grid.'</ul>';
+	# ripristino ricerca
+	wp_reset_postdata();
+   } else {
+	$grid = '<p><strong>Nessun articolo trovato</strong></p>';
+   }
+
+   return $grid;
+
+ }
+
+# creazione della griglia per il loop dei libri: pesca il campo del titolo del libro
 add_shortcode( 'griglialibri', 'griglialibri' );
 
  function griglialibri ($atts) {
@@ -84,7 +164,6 @@ add_shortcode( 'griglialibri', 'griglialibri' );
 		# recupero dei valori dei campi personalizzati definiti in metabox.php
                 # guida: https://wordpress.stackexchange.com/questions/13074/pull-custom-fields-from-custom-posts-within-a-loop
                 $customtitlevalue = get_post_meta($post->ID, "meta-titolo", true);
-                $customimgvalue = get_post_meta($post->ID, "meta-urlcover", true);
                 $thumb = get_the_post_thumbnail($post->ID, 'thumbnail');
 		
 		# ciclo if che sostituisce, se presente, il titolo del post con il titolo del libro
