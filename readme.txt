@@ -39,6 +39,8 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 [tabspeciali speciale="slug speciale"]
 
 == Changelog ==
+* 2020.0922
+  * Corretto errore nella personalizzazione del *feed* che genera errore in caso di mancata installazione di Co-Authors Plus
 * 2020.0919
   * Pulizia codice speciali
   * Eliminato il campo sull'url della copertina nel metabox dei dati aggiuntivi per i libri
