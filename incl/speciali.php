@@ -84,29 +84,31 @@ function tabspeciali($atts) {
 	);
 	
 	#tutti i termini associati all'eventuale speciale associato al post
-	$term_list = wp_get_post_terms($post->ID, 'speciali', array("fields" => "all"));
-	#estrazione del nome dello speciale associato al post
-	$nomespeciale = $term_list[0]->name;
-	
-	#if per determinare se l'articolo fa parte dello speciale; in caso positivo crea l'elenco
-	#usato lo stile del tema
-	if ($nomespeciale <> $speciale) { $content = null; } else {
-		$q = new WP_Query( array( 'speciali' => $speciale, 'posts_per_page'=>-1 ) );
-		$header = '<aside id="recent-posts-3" class="widget widget_recent_entries clearfix"><header><div class="title"><span>Gli articoli dello speciale '.$speciale.'</span></div></header><ul>';
+	$terms = get_the_terms ( $post->ID, 'speciali' );
+
+	foreach ( $terms as $term ) {
+		$term_link = get_term_link( $term, 'speciali' );
+		$toc = $term->slug;
 		
-		if ( $q->have_posts() ) {
-			while ( $q->have_posts() ) {
-				$q->the_post();
-				$titolo = get_the_title();
+		if ( $toc <> $speciale ) {
+			$content = null;
+		} else {
+			$q = new WP_Query( array( 'speciali' => $speciale, 'posts_per_page'=>-1 ) );
+			$header = '<h4 class="widget-title h6"><span>Gli articoli dello speciale '.$term->name.'</span></h4>';
+		
+			if ( $q->have_posts() ) {
+				while ( $q->have_posts() ) {
+					$q->the_post();
+					$titolo = get_the_title();
 				
-				$content .= '<li><a href="'.get_the_permalink().'" style="color: #1d71b8;">'.$titolo.'</a></li>';
-			}
+					$content .= '<li><a href="'.get_the_permalink().'">'.$titolo.'</a></li>';
+				}
 			/* ripristino */
 			wp_reset_postdata();
 		}
+			$content = '<div id="recent-posts-2" class="widget widget_recent_entries">'.$header.'<ul>'.$content.'</ul></div>';
+		}		
 	}
-	
-	$content = $header.'<br/>'.$content.'</ul></aside>';
 	
 	return $content;
 }
