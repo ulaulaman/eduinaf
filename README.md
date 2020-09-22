@@ -35,6 +35,7 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 ## Changelog
 * 2020.0922
   * Corretto errore nella personalizzazione del *feed* che genera errore in caso di mancata installazione di Co-Authors Plus
+  * Nuova modifica nello *shortcode tabspeciali* che ora funziona usando lo *slug* dello speciale. Aspetto integrato con il nuovo tema e corretto errore che impedisce di pescare tutti gli articoli di uno speciale con nome costituito da più parole
 * 2020.0919
   * Pulizia codice speciali
   * Eliminato il campo sull'url della copertina nel metabox dei dati aggiuntivi per i libri

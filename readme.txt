@@ -41,6 +41,7 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 == Changelog ==
 * 2020.0922
   * Corretto errore nella personalizzazione del *feed* che genera errore in caso di mancata installazione di Co-Authors Plus
+  * Nuova modifica nello *shortcode tabspeciali* che ora funziona usando lo *slug* dello speciale. Aspetto integrato con il nuovo tema e corretto errore che impedisce di pescare tutti gli articoli di uno speciale con nome costituito da più parole
 * 2020.0919
   * Pulizia codice speciali
   * Eliminato il campo sull'url della copertina nel metabox dei dati aggiuntivi per i libri
@@ -51,7 +52,7 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
   * Aggiunto shortcode per la mappa delle sedi INAF
 * 2020.0908
   * Aggiunto bollino livello trasversale nella cartella delle immagini per sezione astrodidattica
-  * aggiunto lo *shortcode tabspeciali* che sostituirà lo *shortcode specialishort* che continua a produrre errore nella barra laterale in caso di inserimento di più speciali
+  * Aggiunto lo *shortcode tabspeciali* che sostituirà lo *shortcode specialishort* che continua a produrre errore nella barra laterale in caso di inserimento di più speciali
 * 2020.0907
   * Correzione errore nel codice della tabella degli speciali (*shortcode specialishort*) che va nella spalla degli articoli
   * Nella griglia degli speciali (*shortcode grigliaspeciali*), specificato di raccogliere solo gli articoli
@@ -59,50 +60,58 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 * 2020.0824
   * Modifca alla griglia degli speciali: adottata la tabella personalizzata
 * 2020.0728
-  * aggiunte immagini per i livelli didattici nella cartella "images"
-  * aggiunte costellazioni e astrofoto al *feed*, tolte attività didattiche
-  * tolte le videolezioni dagli speciali
+  * Aggiunte immagini per i livelli didattici nella cartella "images"
+  * Aggiunte costellazioni e astrofoto al *feed*, tolte attività didattiche
+  * Tolte le videolezioni dagli speciali
 * 2020.0709
-  * estesi gli speciali anche a videolezioni e alla nuova tipologia astrodidattica
+  * Estesi gli speciali anche a videolezioni e alla nuova tipologia astrodidattica
 * 2020.0707
-  * aggiunta compatibilità con Wordpress 4.9.5
+  * Aggiunta compatibilità con Wordpress 4.9.5
 * 2020.0706
-  * disabilitato contacaratteri (in conflitto con plugin che incorpora il google calendar)
-  * disabilitati *shortcode* della didattica
-  * nuovo avatar di login
+  * Disabilitato contacaratteri (in conflitto con plugin che incorpora il google calendar)
+  * Disabilitati *shortcode* della didattica
+  * Nuovo *avatar* di *login*
 * 2018.0625
-  * aggiunto il permalink sull'immagine in evidenza
-  * tolta la classe del titolo
-  * aggiunta la data con la classe del tema
-  * modifiche minori di ordine grafico
+  * Aggiunto il *permalink* sull'immagine in evidenza
+  * Tolta la classe del titolo
+  * Aggiunta la data con la classe del tema
+  * Modifiche minori di ordine grafico
 * 2018.0622
-  * creazione di una griglia per la home per mostrare gli articoli in evidenza con una tassonomia personalizzata creata con plugin esterno
-  * creazione del css della griglia della home
-* 2018.0503 modifica minore per sistemare la tabella degli articoli di uno Speciale nella spalla
+  * Creazione di una griglia per la home per mostrare gli articoli in evidenza con una tassonomia personalizzata creata con plugin esterno
+  * Creazione del css della griglia della home
+* 2018.0503
+  * Modifica minore per sistemare la tabella degli articoli di uno Speciale nella spalla
 * 2018.0328 varie modifiche agli *shortcode* per la gestione degli Speciali
-  * sostituito lo *shortcode* per la creazione della talebba degli articoli di uno speciale con uno con un controllo interno, utilizzabile direttamente in un *widget* di testo
-  * modifiche minori alla griglia
-* 2018.0327 corretto errore nel *path* di speciali.css
+  * Sostituito lo *shortcode* per la creazione della talebba degli articoli di uno speciale con uno con un controllo interno, utilizzabile direttamente in un *widget* di testo
+  * Modifiche minori alla griglia
+* 2018.0327
+  * Corretto errore nel *path* di speciali.css
 * 2018.0323 aggiunte funzionalità per gli Speciali
-  * aggiunta una tassonomia specifica per includere gli articoli in un dato speciale
-  * aggiunti due *shortcode* per la pubblicazione di un box all'interno degli articoli e di una griglia nella pagina di un dato speciale
-  * aggiunto un css per la personalizzazione del box da utilizzare in futuro anche per le tabelle degli eventi
-* 2018.0228 incluso il file shortcode.php
-  * aggiunge una serie di *shortcode* compatibili con i campi creati con [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/) e associati con le attività didattiche, tipologia di post creata con [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
-* 2018.0219 modifiche nei *loop* e nelle griglie e aggiunta di campi personalizzati:
-  * cancellazione della griglia precedente
-  * creazione di una griglia per un *loop* generico
-  * creazione della griglia per i libri
-  * creazione degli *shortcode* corrispondenti
-  * creazione di un *metabox* per l'aggiunta del titolo di un libro e dell'url della sua copertina
-  * aggiunta in grid.php del codice per sostituire, se presente, il titolo del libro con il titolo del post nel caso della griglia di libri
-* 2018.0217 aggiunto un *loop* personalizzato:
-  * aggiunto uno *shortcode* che mostra tutti i post dati una categoria e un'etichetta: di default sono rispettivamente 'libri' e 'libri-per-bambini-e-ragazzi'
-  * incluso il css per la griglia
-* 2018.0214 aggiunti colori ai *link*
-* 2018.0212 aggiunto *shortcode* per articoli tratti da Sapere
-* 2018.0211 semplificazioni del codice e nuova numerazione:
-  * crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode* dei *link*
+  * Aggiunta una tassonomia specifica per includere gli articoli in un dato speciale
+  * Aggiunti due *shortcode* per la pubblicazione di un box all'interno degli articoli e di una griglia nella pagina di un dato speciale
+  * Aggiunto un css per la personalizzazione del box da utilizzare in futuro anche per le tabelle degli eventi
+* 2018.0228
+  * Incluso il file shortcode.php
+  * Aggiunge una serie di *shortcode* compatibili con i campi creati con [Custom Field Suite](https://wordpress.org/plugins/custom-field-suite/) e associati con le attività didattiche, tipologia di post creata con [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
+* 2018.0219
+  * Modifiche nei *loop* e nelle griglie e aggiunta di campi personalizzati:
+  * Cancellazione della griglia precedente
+  * Creazione di una griglia per un *loop* generico
+  * Creazione della griglia per i libri
+  * Creazione degli *shortcode* corrispondenti
+  * Creazione di un *metabox* per l'aggiunta del titolo di un libro e dell'url della sua copertina
+  * Aggiunta in grid.php del codice per sostituire, se presente, il titolo del libro con il titolo del post nel caso della griglia di libri
+* 2018.0217
+  * Aggiunto un *loop* personalizzato:
+  * Aggiunto uno *shortcode* che mostra tutti i post dati una categoria e un'etichetta: di *default* sono rispettivamente 'libri' e 'libri-per-bambini-e-ragazzi'
+  * Incluso il css per la griglia
+* 2018.0214
+  * Aggiunti colori ai *link*
+* 2018.0212
+  * Aggiunto *shortcode* per articoli tratti da *Sapere*
+* 2018.0211
+  * Aemplificazioni del codice e nuova numerazione di versione
+  * Crezione di *file php* indipendenti con i codici relativi alla pagina di descrizione, al contacaratteri, alla manipolazione del *feed rss*, per gli *shortcode* dei *link*
 * 0.9.6 test per wp 4.9.4
 * 0.9.5 test per wp 4.9.3
 * 0.9.4 aggiunto il Plugin URI
