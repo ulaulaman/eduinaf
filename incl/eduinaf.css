@@ -1,3 +1,12 @@
+/* twitter & fb */
+
+.twitter-tweet { margin:auto; }
+.fb-post { margin:auto;border:none;overflow:hidden }
+
+/* headline */
+
+.entry-headline { font-style: italic; }
+
 /* per griglia in evidenza */
 
 .evidenza {
