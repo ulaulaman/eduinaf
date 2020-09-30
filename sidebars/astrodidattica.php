@@ -169,7 +169,7 @@ add_shortcode( 'sbdidattica', function () {
 	$numcat = sizeof( $terms );
 	$i = 0;
 	foreach ( $terms as $term ) {
-		$term_link = get_term_link( $term, 'parole_chiave' );
+		$term_link = get_term_link( $term, 'collaborazioni' );
 		$i++;
 		if ( $i < $numcat ) {
 			$ente = $ente.'<a rel="tag" href="'.$term_link.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/coll/"'.$term->slug.'.png" width="90%" /></a><br/>';
