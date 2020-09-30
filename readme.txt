@@ -39,6 +39,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 [tabspeciali speciale="slug speciale"]
 
 == Changelog ==
+* 2020.1001
+  * Aggiunto *shortcode* per la *sidebar* didattica
+  * Aggiunto *shortcode* per la *sidebar* astrofoto
+  * Aggiunti in css personalizzazioni per *headline* e per incorporazioni da twitter e facebook
 * 2020.0922
   * Corretto errore nella personalizzazione del *feed* che genera errore in caso di mancata installazione di Co-Authors Plus
   * Nuova modifica nello *shortcode tabspeciali* che ora funziona usando lo *slug* dello speciale. Aspetto integrato con il nuovo tema e corretto errore che impedisce di pescare tutti gli articoli di uno speciale con nome costituito da più parole
