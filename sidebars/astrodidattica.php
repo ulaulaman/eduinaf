@@ -23,7 +23,7 @@ add_shortcode( 'sbdidattica', function () {
 			$type = $type.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
 		} else {
 			$type = $type.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
-		}		
+		}
 	}
 	
 	$auth = 'di ';
@@ -160,10 +160,6 @@ add_shortcode( 'sbdidattica', function () {
 	}
 	
 	$collaborazione = null;
-	
-	if ( has_term( 'Europlanet', 'autore_didattico' ) ) {
-		$ente = '<img src="https://edu.inaf.it/wp-content/uploads/2020/03/europlanet_banner-300x156.png" /></p>';
-	}
 	
 	$terms = get_the_terms ( $post->ID, 'collaborazioni' );
 	$numcat = sizeof( $terms );
