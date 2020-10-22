@@ -109,7 +109,13 @@ function tabspeciali($atts) {
 			$content = '<div id="recent-posts-2" class="widget widget_recent_entries">'.$header.'<ul>'.$content.'</ul></div>';
 		}		
 	}
+
+	if ( get_post_type() == 'post' ) {
+		$out = $content;
+	} else {
+		$out = null;
+	}
 	
-	return $content;
+	return $out;
 }
 add_shortcode( 'tabspeciali', 'tabspeciali' );
