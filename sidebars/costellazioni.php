@@ -6,7 +6,7 @@
 # menu
 add_shortcode( 'menucostellazioni', function () {
 	
-	$menu = '<div align="center" class="btn-group"><button><a href="https://edu.inaf.it/le-costellazioni/">Le costellazioni</a></button><button><a href="https://edu.inaf.it/le-costellazioni/mappe-stagionali/">Le mappe stagionali</a></button><button><a href="https://edu.inaf.it/le-costellazioni/glossario/">Glossario</a></button><button><a href="https://edu.inaf.it/astroschede/">Schede astronomiche</a></button><button><a href="http://edu.inaf.it/category/rubriche/il-cielo-del-mese/" target="eduinaf">Il cielo del mese</button></div>';
+	$menu = '<div align="center" class="btn-group"><button><a href="https://edu.inaf.it/le-costellazioni/">Le costellazioni</a></button><button><a href="https://edu.inaf.it/le-costellazioni/mappe-stagionali/">Le mappe stagionali</a></button><button><a href="https://edu.inaf.it/le-costellazioni/glossario/">Glossario</a></button><button><a href="https://edu.inaf.it/astroschede/">Schede astronomiche</a></button><button><a href="http://edu.inaf.it/category/rubriche/il-cielo-del-mese/" target="eduinaf">Il cielo del mese</a></button></div>';
 	
 	$out = $menu;
 
