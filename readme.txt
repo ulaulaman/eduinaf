@@ -47,6 +47,11 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 == Changelog ==
+* 2020.1022
+  * Corretto errore in codice html menu costellazioni
+  * Corretti errori nella *sidebar* didattica e sistemazioni varie del codice
+  * Aggiunto supporto per l'ordine personalizzato degli autori usando i *custom fields*
+  * Aggiunto nella tabspeciali codice che previene un errore che occorre con i *custom post type* e nasconde la tabella
 * 2020.1021
   * Modificato css dei menu (correzione malfunzionamento con *tag* ul)
   * Corretto errore nella *sidebar* didattica che produce doppio logo *Europlanet*
