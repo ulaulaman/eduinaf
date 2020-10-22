@@ -26,19 +26,50 @@ add_shortcode( 'sbdidattica', function () {
 		}
 	}
 	
-	$auth = 'di ';
-	$terms = get_the_terms ( $post->ID, 'autore_didattico' );
-	$numcat = sizeof( $terms );
-	$i = 0;
-	foreach ( $terms as $term ) {
-		$term_link = get_term_link( $term, 'autore_didattico' );
-		$i++;
-		if ( $i < $numcat ) {
-			$auth = $auth.'<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</a></strong>, ';
+	$auth = null;
+	$custom = get_post_custom();
+	foreach( $custom as $key => $value ) {
+		$key_name = get_post_custom_values( $key = 'autore_attivita' );
+		if ( $key_name[0] <> null ) {
+			$auth1 = '<strong>'.$key_name[0].'</strong>';
 		} else {
-			$auth = $auth.'<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</a></strong>';
+			$auth1 = null;
+		}
+		if ( $key_name[1] <> null ) {
+			$auth2 = ', <strong>'.$key_name[1].'</strong>';
+		} else {
+			$auth2 = null;
+		}
+		if ( $key_name[2] <> null ) {
+			$auth3 = ', <strong>'.$key_name[2].'</strong>';
+		} else {
+			$auth3 = null;
+		}
+		if ( $key_name[3] <> null ) {
+			$auth4 = ', <strong>'.$key_name[3].'</strong>';
+		} else {
+			$auth4 = null;
+		}
+		
+		$auth = $auth1.$auth2.$auth3.$auth4;
+	}
+	
+	if ( $auth == null ) {
+		$terms = get_the_terms ( $post->ID, 'autore_didattico' );
+		$numcat = sizeof( $terms );
+		$i = 0;
+		foreach ( $terms as $term ) {
+			$term_link = get_term_link( $term, 'autore_didattico' );
+			$i++;
+			if ( $i < $numcat ) {
+				$auth = $auth.'<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</a></strong>, ';
+			} else {
+				$auth = $auth.'<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</a></strong>';
+			}
 		}
 	}
+	
+	$auth = 'di '.$auth;
 	
 	$curriculum = null;
 	
@@ -139,7 +170,7 @@ add_shortcode( 'sbdidattica', function () {
 		$costo = null;
 		}
 	
-	$outnew = '<p>'.$img.'</p><p>'.$type.' '.$auth.'</p>'.$curriculum.'<p>'.$keyw.'</p><p>'.$livello.'</p>';
+	$outnew = $img.'<p>'.$type.' '.$auth.'</p>'.$curriculum.'<p>'.$keyw.'</p><p>'.$livello.'</p>';
 	
 	if ( $durata <> 'null' ) {
 		$outnew = $outnew.'<p>'.$durata.'</p>';
@@ -168,7 +199,7 @@ add_shortcode( 'sbdidattica', function () {
 		$term_link = get_term_link( $term, 'collaborazioni' );
 		$i++;
 		if ( $i < $numcat ) {
-			$ente = $ente.'<a rel="tag" href="'.$term_link.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/coll/'.$term->slug.'.png" width="90%" /></a><br/>';
+			$ente = $ente.'<a rel="tag" href="'.$term_link.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/coll/'.$term->slug.'.png" width="90%" style="padding-bottom:10px;" /></a><br/>';
 		} else {
 			$ente = $ente.'<a rel="tag" href="'.$term_link.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/coll/'.$term->slug.'.png" width="90%" /></a>';
 		}	
