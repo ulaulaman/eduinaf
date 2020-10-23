@@ -107,8 +107,10 @@ function tabspeciali($atts) {
 			wp_reset_postdata();
 		}
 			$content = '<div id="recent-posts-2" class="widget widget_recent_entries">'.$header.'<ul>'.$content.'</ul></div>';
-		}		
+		}
 	}
+
+	$content = $content.$after_widget;
 
 	if ( get_post_type() == 'post' ) {
 		$out = $content;
