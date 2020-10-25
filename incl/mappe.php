@@ -26,3 +26,23 @@ add_shortcode( 'mappainaf', function () {
 
 	return $out;
 } );
+
+add_shortcode( 'mappairnet', function () {
+
+	$out = '<div class="mappainaf">	<img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/mappa-italia-inaf.png" alt="" width="800" height="917" class="aligncenter size-full wp-image-4137" />
+	<box><luogoinaf class="torino"><span>Osservatorio Astrofisico di Torino</span></luogoinaf></box>
+	<box><luogoinaf class="milano"><span>Osservatorio Astronomico di Brera</span></luogoinaf></box>
+	<box><luogoinaf class="padova"><span><a href="../rete-irnet\osservatorio-astronomico-di-padova/">Osservatorio Astronomico di Padova</a></luogoinaf></span></box>
+	<box><luogoinaf class="trieste"><span><a href="../rete-irnet/osservatorio-astronomico-di-trieste/">Osservatorio Astronomico di Trieste</a></span></luogoinaf></box>
+	<box><luogoinaf class="bologna"><span><a href="../rete-irnet/istituto-di-radio-astronomia/">IRA Bologna</a></span></luogoinaf></box>
+	<box><luogoinaf class="firenze"><span>Osservatorio Astrofisico di Arcetri</span></box></luogoinaf>
+	<box><luogoinaf class="roma"><span>Osservatorio Astronomico di Roma</span></luogoinaf></box>
+	<box><luogoinaf class="teramo"><span><a href="../rete-irnet\osservatorio-astronomico-abruzzo/">Osservatorio Astronomico d\'Abruzzo</a></span></luogoinaf></box>
+	<box><luogoinaf class="napoli"><span><a href="../rete-irnet/osservatorio-astronomico-di-capodimonte/">Osservatorio Astronomico di Capidimonte</a></span></luogoinaf></box>
+	<box><luogoinaf class="catania"><span><a href="../rete-irnet/osservatorio-astrofisico-di-catania/">Osservatorio Astrofisico di Catania</a></span></luogoinaf></box>
+	<box><luogoinaf class="palermo"><span><a href="../rete-irnet/osservatorio-astronomico-di-palermo/">Osservatorio Astronomico di Palermo</a></span></luogoinaf></box>
+	<box><luogoinaf class="cagliari"><span><a href="../rete-irnet/osservatorio-astronomico-di-cagliari/">Osservatorio Astronomico di Cagliari</a></span></luogoinaf></box>
+	</div>';
+
+	return $out;
+} );
