@@ -44,6 +44,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 ## Changelog
+* 2020.1025
+  * Sistemazione cartella immagini
+  * Cambio percorso bottoni
+  * Aggiunto *shortcode* mappa IRNET
 * 2020.1023
   * Aggiunto codice che corregge errore generato dallo *shortcode* tabspeciali quando usato in un *widget* di testo, se questo risulta ultimo della *sidebar*
   * Aggiunto *shortcode* (in grid.php) per la creazione di *loop* di articoli con categoria e *tag* come variabili
