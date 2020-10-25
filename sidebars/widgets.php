@@ -15,7 +15,7 @@ class Widget_Didattica extends WP_Widget {
         );
     }
  
-    /** Front-end display of widget */
+    /** Front-end del widget */
     public function widget( $args, $instance ) {
         extract( $args );
 		$shortcode = do_shortcode('[sbdidattica]');
@@ -23,7 +23,7 @@ class Widget_Didattica extends WP_Widget {
         echo $after_widget;
     }
  
-    /** Back-end widget form */
+    /** Back-end del widget */
     public function form( $instance ) {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
@@ -68,7 +68,7 @@ class Widget_Stars extends WP_Widget {
         );
     }
  
-    /** Front-end display of widget */
+    /** Front-end del widget */
     public function widget( $args, $instance ) {
         extract( $args );
 		$shortcode = do_shortcode('[sbcostellazioni]');
@@ -76,7 +76,7 @@ class Widget_Stars extends WP_Widget {
         echo $after_widget;
     }
  
-    /** Back-end widget form */
+    /** Back-end del widget */
     public function form( $instance ) {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
@@ -100,9 +100,9 @@ class Widget_Stars extends WP_Widget {
         return $instance;
     }
  
-} // class Widget_Didattica
+} // class Widget_Stars
 
-// Registra Widget_Didattica
+// Registra Widget_Stars
 add_action( 'widgets_init', 'register_stars' );
      
 function register_stars() { 
