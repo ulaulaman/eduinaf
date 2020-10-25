@@ -4,12 +4,12 @@
 #
 add_shortcode( 'sbdidattica', function () {
 	
-	$img = '<div align="center"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/dida/avatar_eduinaf_blu.png" width="40%" /></div>';
+	$img = '<div align="center"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/avatar_eduinaf_blu.png" width="40%" /></div>';
 	$terms = get_the_terms( $post->ID, 'livello_educativo' ); 
 	$numcat = sizeof( $terms );
  	foreach ( $terms as $term ) { 
 		$term_link = get_term_link( $term, 'livello_educativo' );
-		$img = $img.'<a rel="tag" href="'.$term_link.'" title="Vedi tutte le attività del livello: '.$term->name.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/'.$term->slug.'.png" width="25%" /></a>';
+		$img = $img.'<a rel="tag" href="'.$term_link.'" title="Vedi tutte le attività del livello: '.$term->name.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/dida/'.$term->slug.'.png" width="25%" /></a>';
 	}
 	
 	$type = null;
