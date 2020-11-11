@@ -71,8 +71,10 @@ class Widget_Stars extends WP_Widget {
     /** Front-end del widget */
     public function widget( $args, $instance ) {
         extract( $args );
-		$shortcode = do_shortcode('[sbcostellazioni]');
+        $shortcode = do_shortcode('[sbcostellazioni]');
+        $menu = do_shortcode('[menucostellazioni]');
         echo $shortcode;
+        echo $menu;
         echo $after_widget;
     }
  
