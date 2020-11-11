@@ -49,7 +49,7 @@ Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors P
 == Changelog ==
 * 2020.1111
   * Aggiunta opzione per intro nello *shortcode* postlooptab
-  * Aggiunto in sbdidattica, sbasrofoto, sbcostellazioni codice *if* di controllo sulla tipologia del post per non far pubblicare la sidebar anche nelle tipologie indesiderate
+  * Incorporato menucostellazioni nella *sidebar* delle costellazioni
   * Aggiornata documentazione interna
 * 2020.1025
   * Sistemazione cartella immagini
