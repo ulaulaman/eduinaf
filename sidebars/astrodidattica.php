@@ -216,11 +216,5 @@ add_shortcode( 'sbdidattica', function () {
 	
 	$outnew = $outnew.$licenza;
 
-	if ( get_post_type() == 'astrodidattica' ) {
-		$out = $outnew;
-	} else {
-		$out = null;
-	}
-
 	return $outnew;
 } );
