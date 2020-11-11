@@ -215,8 +215,12 @@ add_shortcode( 'sbdidattica', function () {
 	$licenza = '<p><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="cc"><img src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br/>Quest\'opera è distribuita con <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="cc">Licenza Creative Commons Attribuzione - Non commerciale 4.0 Internazionale</a>.';
 	
 	$outnew = $outnew.$licenza;
-	
-	$out = $img;
+
+	if ( get_post_type() == 'astrodidattica' ) {
+		$out = $outnew;
+	} else {
+		$out = null;
+	}
 
 	return $outnew;
 } );

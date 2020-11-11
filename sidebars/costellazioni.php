@@ -65,10 +65,13 @@ add_shortcode( 'sbcostellazioni', function () {
 		}		
 	}
 	
-	
 	$visibile = '<p><strong>Visibile in</strong>: '.$type.'</p><p>'.$season.'</p>';
 	
-	$out = $map.$field1.$field2.$visibile;
+	if ( get_post_type() == 'costellazioni' ) {
+		$out = $map.$field1.$field2.$visibile;
+	} else {
+		$out = null;
+	}
 
 	return $out;
 } );

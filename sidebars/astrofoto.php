@@ -19,8 +19,12 @@ add_shortcode( 'sbastrofoto', function () {
 			$auth = $auth;
 		}		
 	}
-	
-	$out = $img.$auth;
+
+	if ( get_post_type() == 'astrofoto' ) {
+		$out = $out = $img.$auth;;
+	} else {
+		$out = null;
+	}
 
 	return $out;
 } );
