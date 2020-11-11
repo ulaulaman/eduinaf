@@ -9,6 +9,7 @@ function postlooptab($atts) {
 	extract(
 		shortcode_atts(
 			array(
+				'intro' => null,
 				'categoria' => null,
 				'tag' => null,
 				'pag' => null,
@@ -49,6 +50,12 @@ function postlooptab($atts) {
 	
 	$content = null;
 	
+	if ( $intro <> null ) {
+		$head = '<span>'.$intro.'</span>';
+	} else {
+		$head = '<span>Ultimi articoli</span>';
+	}
+	
 	if ( $q->have_posts() ) {
 		while ( $q->have_posts() ) {
 			$q->the_post();
@@ -63,9 +70,9 @@ function postlooptab($atts) {
 	}
 	
 	if ( $content <> null ) {
-		$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6"><span>Ultimi articoli</span></h4><ul>'.$content.'</ul></div>';
+		$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6">'.$head.'</h4><ul>'.$content.'</ul></div>';
 	} else {
-		$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6"><span>Ultimi articoli</span></h4><ul><li>Nessun articolo presente in archivio</li></ul></div><p></p>';
+		$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6">'.$head.'</h4><ul><li>Nessun articolo presente in archivio</li></ul></div><p></p>';
 	}
 	
 	$out = $content.$after_widget;
