@@ -11,11 +11,18 @@ function eduinaf_menu() {
 function eduinaf_toplevel_page() {
         echo '<h2>Edu INAF Tools</h2>';
 	echo '<div class="wrap">';
-        echo '<p>Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.<br/>In particolare sono presenti gli shortcode per la creazione automatica dei link alle attività astroedu e alle notizie spacescoop. In particolare lo shortcode utilizza due parametri, il codice dell\'attività/news e la lingua</p>';
-        echo '<p><strong>Uso degli shortcode</strong>:</p>';
+        echo '<p>Il plugin aggiunge vari <em>shortcode</em> e codici.</p>';
+        echo '<p><strong>Uso degli <em>shortcode</em></strong>:</p>';
 	echo '<p>[astroedu code="..." lang="..."]</p>';
         echo '<p>[spacescoop code="..." lang="..."]</p>';
-        echo '<p>Entrambi i parametri sono obbligatori per il corretto funzionamento dello shortcode.</p>';
+        echo '<p>Entrambi i parametri sono obbligatori per il corretto funzionamento degli <em>shortcode</em>.</p>';
+        echo '<p>[postlooptab intro="testo di introduzione al <em>loop</em>" categoria="categoria" tag="tag" pag="numero post"]</p>';
+        echo '<p>Lo <em>shortcode</em> funziona anche senza specificare alcuno dei parametri richiesti.</p>';
+        echo '<h3><em>Shortcode</em> delle <em>sidebar</em></h3>';
+        echo '<strong>Didattica</strong>: [sbdidattica]';
+        echo '<strong>Astrofoto</strong>: [sbastrofoto]';
+        echo '<strong>Costellazioni</strong>: [sbcostellazioni]';
+        echo '<strong>Menu costellazioni</strong>: [menucostellazioni]';
 	echo '<h3>Griglia di libri</h3>';
         echo '<p>Il plugin aggiunge anche uno shortcode che genera una griglia. Esistono due distinte versioni: lo shortcode generico:</p>';
         echo '<p>[grigliaeduinaf categoria="..." etichetta="..."]</p>';
