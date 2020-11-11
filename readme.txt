@@ -47,6 +47,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 == Changelog ==
+* 2020.1111
+  * Aggiunta opzione per intro nello *shortcode* postlooptab
+  * Aggiunto in sbdidattica, sbasrofoto, sbcostellazioni codice *if* di controllo sulla tipologia del post per non far pubblicare la sidebar anche nelle tipologie indesiderate
+  * Aggiornata documentazione interna
 * 2020.1025
   * Sistemazione cartella immagini
   * Cambio percorso bottoni
