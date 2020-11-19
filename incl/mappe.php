@@ -13,9 +13,9 @@ add_shortcode( 'mappainaf', function () {
 <box><luogoinaf class="bologna"><span><a href="../sedi-inaf/osservatorio-di-bologna/">Osservatorio di Astrofisica e Scienza dello Spazio di Bologna</a><br/>
 - <a href="../sedi-inaf/ira-bologna/">IRA Bologna</a></span></luogoinaf></box>
 <box><luogoinaf class="firenze"><span><a href="../sedi-inaf/osservatorio-astrofisico-di-arcetri/">Osservatorio Astrofisico di Arcetri</a></span></box></luogoinaf>
-<box><luogoinaf class="roma"><span><a href="../sedi-inaf/osservatorio-astronomico-di-roma/">Osservatorio Astronomico di Roma</a><br/>
-- <a href="../sedi-inaf/iaps-roma/">IAPS Roma</a><br/>
-- <a href="http://www.inaf.it/" target="inaf" style="color: blue;">Sede centrale INAF</a></span></luogoinaf></box>
+<box><luogoinaf class="roma"><span>- <a href="http://www.inaf.it/" target="inaf" style="color: blue;">Sede centrale INAF</a><br/>
+- <a href="../sedi-inaf/osservatorio-astronomico-di-roma/">Osservatorio Astronomico di Roma</a><br/>
+- <a href="../sedi-inaf/iaps-roma/">IAPS Roma</a></span></luogoinaf></box>
 <box><luogoinaf class="teramo"><span><a href="../sedi-inaf/osservatorio-astronomico-dabruzzo/">Osservatorio Astronomico d\'Abruzzo</a></span></luogoinaf></box>
 <box><luogoinaf class="napoli"><span><a href="../sedi-inaf/osservatorio-astronomico-di-capodimonte/">Osservatorio Astronomico di Capidimonte</a></span></luogoinaf></box>
 <box><luogoinaf class="catania"><span><a href="../sedi-inaf/osservatorio-astrofisico-di-catania/">Osservatorio Astrofisico di Catania</a></span></luogoinaf></box>
