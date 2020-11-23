@@ -14,7 +14,7 @@ Il *plugin* aggiunge un'icona per il *login*, personalizza il messaggio nell'*ad
 In particolare definisce una serie di *shortcode* per la costruzione delle *sidebar* di alcuni *custom post type*:
 
 * **Didattica**: [sbdidattica] (con *widget*)
-* **Astrofoto**: [sbastrofoto]
+* **Astrofoto**: [sbastrofoto] (con *widget*)
 * **Costellazioni**: [sbcostellazioni] (con *widget*)
 * **Menu costellazioni**: [menucostellazioni]
 * **Corso base di astronomia**: [sbcorsobase] (con *widget*)
@@ -48,6 +48,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 == Changelog ==
+* 2020.1124
+  * Inserita la lingua italiana di *default* nei *permalink* di astroedu e spacescoop
+  * Aggiunto il curatore della scheda nella *sidebar* costellazioni
+  * Aggiunto il *widget* per la *sidebar* delle astrofoto
 * 2020.1119
   * Piccola modifica di codice nella mappa delle sedi INAF
   * Reso automatico il menu delle costellazioni
