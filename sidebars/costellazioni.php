@@ -73,7 +73,7 @@ add_shortcode( 'sbcostellazioni', function () {
 		
 	$visibile = '<p><strong>Visibile in</strong>: '.$type.'</p><p>'.$season.'</p>';
 
-	$auth = = do_shortcode('[blog-post-coauthors]');
+	$auth = do_shortcode('[blog-post-coauthors]');
 	$cura = '<h4 class="widget-title"><span>Scheda a cura di</h4><p><strong>'.$auth.'</strong></p>';
 	
 	$out = $map.$field1.$field2.$visibile.$cura;
