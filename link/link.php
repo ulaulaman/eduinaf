@@ -1,7 +1,7 @@
 <?php
 
 # creazione link esterni con shortcode
-# astroedu
+# astroEdu
 add_shortcode('astroedu', 'astroedu');
 
  function astroedu ($atts, $content = null) {
@@ -16,12 +16,18 @@ add_shortcode('astroedu', 'astroedu');
       )
    );
 
-   $link = '<a href="http://astroedu.iau.org/'.$lang.'/activities/'.$code.'/" target="astroedu" style="color: #faaf3f;">'.$content.'</a>';
+   if ( $lang <> null ) {
+      $link = '<a href="http://astroedu.iau.org/'.$lang.'/activities/'.$code.'/" target="astroedu" style="color: #faaf3f;">'.$content.'</a>';
+   } else {
+      $link = '<a href="http://astroedu.iau.org/it/activities/'.$code.'/" target="astroedu" style="color: #faaf3f;">'.$content.'</a>';
+   }
+
+   
 
    return $link;
 }
 
-# spacescoop
+# Spacescoop
 add_shortcode('spacescoop', 'spacescoop');
 
  function spacescoop ($atts, $content = null) {
@@ -36,7 +42,11 @@ add_shortcode('spacescoop', 'spacescoop');
       )
    );
 
-   $link = '<a href="http://www.spacescoop.org/'.$lang.'/scoops/'.$code.'/" target="spacescoop" style="color: #03709c">'.$content.'</a>';
+   if ( $lang <> null ) {
+      $link = '<a href="http://www.spacescoop.org/'.$lang.'/scoops/'.$code.'/" target="spacescoop" style="color: #03709c">'.$content.'</a>';
+   } else {
+      $link = '<a href="http://www.spacescoop.org/it/scoops/'.$code.'/" target="spacescoop" style="color: #03709c">'.$content.'</a>';
+   }
 
    return $link;
 }
