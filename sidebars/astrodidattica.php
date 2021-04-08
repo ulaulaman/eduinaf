@@ -102,13 +102,18 @@ add_shortcode( 'sbdidattica', function () {
 	}
 	
 	$curriculum = '<strong>Argomenti dal <em>curriculum</em> scolastico:</strong>';
-	if ( $curriculumastro <> 'null' ) {
-		$curriculum = '<p>'.$curriculum.'<br/>'.$curriculumastro;
-	}
-	if ( $curriculumsteam <> 'null' ) {
-		$curriculum = $curriculum.', '.$curriculumsteam.'</p>';
+	if ( $curriculumsteam <> null ) {
+		if ( $curriculumastro <> null ) {
+			$curriculum = '<p>'.$curriculum.'<br/>'.$curriculumastro.', '.$curriculumsteam.'</p>';
+		} else {
+			$curriculum = '<p>'.$curriculum.'<br/>'.$curriculumsteam.'</p>';
+		}
 	} else {
-		$curriculum = $curriculum.'</p>';
+		if ( $curriculumastro <> null ) {
+			$curriculum = '<p>'.$curriculum.'<br/>'.$curriculumastro.'</p>';
+		} else {
+			$curriculum = null;
+		}
 	}
 	
 	$keyw = '<strong>Parole chiave:</strong> ';
