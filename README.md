@@ -45,6 +45,9 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 ## Changelog
+* 2021.0409
+  * Aggiunto il logo di Roma3
+  * Sistemata la parte degli argomenti del *curriculum* scolastico nella *sidebar* di astrodidattica
 * 2020.1124
   * Inserita la lingua italiana di *default* nei *permalink* di astroedu e spacescoop
   * Aggiunto il curatore della scheda nella *sidebar* costellazioni
