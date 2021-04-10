@@ -2,7 +2,7 @@
 Contributors: ulaulaman
 Tags: eduinaf, inaf
 Requires at least: 4.8.5
-Tested up to: 5.5.1
+Tested up to: 5.5.3
 Requires PHP: 7.0.18
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
