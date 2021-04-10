@@ -35,7 +35,7 @@ function eduinaf_toplevel_page() {
         echo '<p>dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni</p>';
 	echo '<h3>Shortcode per gli speciali</h3>';
 	echo '<p>Per la creazione del <em>loop</em> nella pagina di uno speciale:</p>';
-	echo '<p>[grigliaspeciali speciale="slug speciale"]</p>';
+	echo '<p>[grigliaspeciali speciale="slug speciale" tipologia post"]</p>';
 	echo '<p>Per inserire una lista degli articoli di uno speciale nella barra laterale:</p>';
 	echo '<p>[tabspeciali speciale="slug speciale"]</p>';
 	echo '</div>';
