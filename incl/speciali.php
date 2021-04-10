@@ -46,9 +46,22 @@ function grigliaspeciali($atts) {
 		while ( $q->have_posts() ) {
 			$q->the_post();
 			$titolo = get_the_title();
-			if ( function_exists( 'get_coauthors' ) ) {
-				$autori = coauthors_posts_links(", ", " e ", null, null, false);
-			} else {$autori = the_author();}
+
+			if ( $tipo == 'post' ) {
+				if ( function_exists( 'get_coauthors' ) ) {
+					$autori = coauthors_posts_links(", ", " e ", null, null, false);
+				} else {
+					$autori = the_author();
+				}
+			} else {
+				$autori = null;
+			}
+
+			if ( $autori <> null ) {
+				$auth = '<em>di <strong>'.$autori.'</strong></em><br/>';
+			} else {
+				$auth = null;
+			}
 			
 			$estratto = get_the_excerpt();
 
@@ -57,13 +70,15 @@ function grigliaspeciali($atts) {
 
 			/* griglia con titolo ed estratto: formato tabella */
 			$headerblu = '<div class="divTableHeading"><div class="divTableRow"><div class="divTableHead">'.$titolo.'</div></div></div>';
-			$contentblu .= $headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell"><em>di <strong>'.$autori.'</strong></em><br/>'.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div></div>';
+			$contentblu .= $headerblu.'<div class="divTableBody"><div class="divTableRow"><div class="divTableCell">'.$auth.$estratto.'<br/>(<a href="'.get_the_permalink().'" style="color: #1d71b8;">continua</a>)</div></div></div>';
 		}
 		
 		$contentblu = $contentblu.'</div>';
 		
 		/* ripristino */
 		wp_reset_postdata();
+	} else  {
+		$contenutoblu = null;
 	}
 	
 	return $contentblu;
