@@ -37,7 +37,7 @@ dove il parametro etichetta è, al momento, settato di *default* sul valore "lib
 
 Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In particolare i due *shortcode* hanno la seguente sintassi:
 
-* Griglia da inserire nella pagina dello Speciale: [grigliaspeciali speciale="slug speciale"]
+* Griglia da inserire nella pagina dello Speciale: [grigliaspeciali speciale="slug speciale" tipo="slug tipologia post"]
 * Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [tabspeciali speciale="slug speciale"]
 
 ### Storia
@@ -45,6 +45,9 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 ## Changelog
+* 2021.0410
+  * Corretto errore in [grigliaspeciali] dovuto a *query* senza risultato
+  * Aggiunte tipologie di post differenti in [grigliaspeciali]
 * 2021.0409
   * Aggiunto il logo di Roma3
   * Sistemata la parte degli argomenti del *curriculum* scolastico nella *sidebar* di astrodidattica
