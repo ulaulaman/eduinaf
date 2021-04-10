@@ -40,6 +40,10 @@ function grigliaspeciali($atts) {
 		)
 	);
 	
+	if ( $tipo == null ) {
+		$tipo = 'post';
+	}
+
 	$q = new WP_Query( array( 'speciali' => $speciale, 'post_type'=> $tipo, 'posts_per_page'=>-1 ) );
 	$contentblu ='<div class="divTable paleBlueRows">';
 	
@@ -79,7 +83,7 @@ function grigliaspeciali($atts) {
 		/* ripristino */
 		wp_reset_postdata();
 	} else  {
-		$contenutoblu = null;
+		$contentblu = null;
 	}
 	
 	return $contentblu;
