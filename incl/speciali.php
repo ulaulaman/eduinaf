@@ -33,13 +33,14 @@ function grigliaspeciali($atts) {
 	extract(
 		shortcode_atts(
 			array(
-				'speciale' => 'null',
+				'speciale' => null,
+				'tipo' => null,
 			),
 			$atts
 		)
 	);
 	
-	$q = new WP_Query( array( 'speciali' => $speciale, 'post_type'=> 'post', 'posts_per_page'=>-1 ) );
+	$q = new WP_Query( array( 'speciali' => $speciale, 'post_type'=> $tipo, 'posts_per_page'=>-1 ) );
 	$contentblu ='<div class="divTable paleBlueRows">';
 	
 	if ( $q->have_posts() ) {
