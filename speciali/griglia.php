@@ -17,8 +17,9 @@ function grigliaspeciali($atts) {
 		$q = new WP_Query( array( 'speciali' => $speciale, 'post_type'=> 'post', 'posts_per_page'=>-1 ) );
 	} else {
 		$q = new WP_Query( array( 'speciali' => $speciale, 'post_type'=> $tipo, 'posts_per_page'=>-1 ) );
-	$contentblu ='<div class="divTable paleBlueRows">';
 	}
+
+	$contentblu ='<div class="divTable paleBlueRows">';
 	
 	if ( $q->have_posts() ) {
 		while ( $q->have_posts() ) {
