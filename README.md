@@ -45,6 +45,8 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 ## Changelog
+* 2021.0416
+  * Spacchettato il *file* speciali.php in tre *file* separati
 * 2021.0410
   * Corretto errore in [grigliaspeciali] dovuto a *query* senza risultato
   * Aggiunte tipologie di post differenti in [grigliaspeciali]
