@@ -50,6 +50,8 @@ Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors P
 == Changelog ==
 * 2021.0416
   * Spacchettato il *file* speciali.php in tre *file* separati
+  * Estesi gli speciali anche ai video della settimana
+  * Rivisto parte del codice della griglia degli speciali
 * 2021.0410
   * Corretto errore in [grigliaspeciali] dovuto a *query* senza risultato
   * Aggiunte tipologie di post differenti in [grigliaspeciali]
