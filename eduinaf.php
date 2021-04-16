@@ -2,7 +2,7 @@
 /*
 Plugin Name: Edu INAF Tools
 Description: Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
-Version: 2021.0410
+Version: 2021.0416
 Author: Gianluigi Filippelli
 Author URI: http://dropseaofulaula.blogspot.it/
 Plugin URI: https://ulaulaman.github.io/eduinaf/
@@ -29,7 +29,9 @@ require_once( EDUINAF__PLUGIN_DIR . 'sidebars/costellazioni.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'sidebars/brera.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'sidebars/widgets.php' );
 # Speciali
-require_once( EDUINAF__PLUGIN_DIR . 'incl/speciali.php' );
+require_once( EDUINAF__PLUGIN_DIR . 'speciali/speciali.php' );
+require_once( EDUINAF__PLUGIN_DIR . 'speciali/griglia.php' );
+require_once( EDUINAF__PLUGIN_DIR . 'speciali/tabella.php' );
 # Mappe
 require_once( EDUINAF__PLUGIN_DIR . 'incl/mappe.php' );
 
