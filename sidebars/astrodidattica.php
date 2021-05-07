@@ -198,24 +198,23 @@ add_shortcode( 'sbdidattica', function () {
 	$collaborazione = null;
 	
 	$terms = get_the_terms ( $post->ID, 'collaborazioni' );
-	$numcat = sizeof( $terms );
-	$i = 0;
-	foreach ( $terms as $term ) {
-		$term_link = get_term_link( $term, 'collaborazioni' );
-		$i++;
-		if ( $i < $numcat ) {
-			$ente = $ente.'<a rel="tag" href="'.$term_link.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/coll/'.$term->slug.'.png" width="90%" style="padding-bottom:10px;" /></a><br/>';
-		} else {
-			$ente = $ente.'<a rel="tag" href="'.$term_link.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/coll/'.$term->slug.'.png" width="90%" /></a>';
-		}	
-	}
-	
-	if ( $i <> 0 ) {
-		$collaborazione = '<p><strong>In collaborazione con</strong>:<br/>'.$ente.'</p>';
-		$outnew = $outnew.$collaborazione;
-	} else {
-		$outnew = $outnew;
-	}
+	if ( empty($terms) ) {
+        	$collaborazione = null;
+        } else {
+		$numcat = sizeof( $terms );
+        $i = 0;
+        foreach ( $terms as $term ) {
+                $term_link = get_term_link( $term, 'collaborazioni' );
+                $i++;
+                $ente .= '<a rel="tag" href="'.$term_link.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/coll/'.$term->slug.'.png" width="90%"';
+                if ( $i < $numcat )
+                        $ente .= 'style="padding-bottom:10px;" /></a><br/>';
+                else
+                        $ente .= ' /></a>';
+		}
+			$collaborazione = '<p><strong>In collaborazione con</strong>:<br/>'.$ente.'</p>';
+			$outnew = $outnew.$collaborazione;
+  		}
 	
 	$licenza = '<p><a href="http://creativecommons.org/licenses/by-nc/4.0/" target="cc"><img src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br/>Quest\'opera è distribuita con <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="cc">Licenza Creative Commons Attribuzione - Non commerciale 4.0 Internazionale</a>.';
 	
