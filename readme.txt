@@ -41,13 +41,15 @@ dove il parametro etichetta è, al momento, settato di *default* sul valore "lib
 
 Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In particolare i due *shortcode* hanno la seguente sintassi:
 
-[grigliaspeciali speciale="slug speciale" tipo="slug tipologia post"]
-
-[tabspeciali speciale="slug speciale"]
+* Griglia da inserire nella pagina dello Speciale: [grigliaspeciali speciale="slug speciale" tipo="slug tipologia post"]
+* [tabspeciali speciale="slug speciale"] (**disabilitato**)
 
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 == Changelog ==
+* 2021.0508
+  * Disabilitata tabella.php in attesa di risolvere il problema nell'[*issue* segnalato](https://github.com/ulaulaman/eduinaf/issues/4)
+  * Modifiche al codice di astrodidattica.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
 * 2021.0416
   * Spacchettato il *file* speciali.php in tre *file* separati
   * Estesi gli speciali anche ai video della settimana
