@@ -5,71 +5,57 @@
 add_shortcode( 'sbdidattica', function () {
 	
 	$img = '<div align="center"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/avatar_eduinaf_blu.png" width="40%" /></div>';
-	$terms = get_the_terms( $post->ID, 'livello_educativo' ); 
-	$numcat = sizeof( $terms );
- 	foreach ( $terms as $term ) { 
-		$term_link = get_term_link( $term, 'livello_educativo' );
-		$img = $img.'<a rel="tag" href="'.$term_link.'" title="Vedi tutte le attività del livello: '.$term->name.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/dida/'.$term->slug.'.png" width="25%" /></a>';
-	}
+	
+	$livello = null;
+	
+	$terms = get_the_terms ( $post->ID, 'livello_educativo' );
+	if ( empty($terms) ) {
+        	$livello = null;
+        } else {
+		$numcat = sizeof( $terms );
+        foreach ( $terms as $term ) {
+                $term_link = get_term_link( $term, 'livello_educativo' );
+                $livello = $livello.'<a rel="tag" href="'.$term_link.'" title="Vedi tutte le attività del livello: '.$term->name.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/dida/'.$term->slug.'.png" width="25%" /></a>';
+		}
+			$img = $img.'<div>'.$livello.'</div>';
+  		}
 	
 	$type = null;
+	
 	$terms = get_the_terms ( $post->ID, 'tipologia_contenuto' );
+	if ( empty($terms) ) {
+		$type = null;
+	} else {
 	$numcat = sizeof( $terms );
 	$i = 0;
 	foreach ( $terms as $term ) {
-		$term_link = get_term_link( $term, 'tipologia_contenuto' );
-		$i++;
-		if ( $i < $numcat ) {
-			$type = $type.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
-		} else {
-			$type = $type.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
-		}
+			$term_link = get_term_link( $term, 'tipologia_contenuto' );
+			$i++;
+			if ( $i < $numcat )
+				$type = $type.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
+			else
+				$type = $type.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
+	}
 	}
 	
 	$auth = null;
-	$custom = get_post_custom();
-	foreach( $custom as $key => $value ) {
-		$key_name = get_post_custom_values( $key = 'autore_attivita' );
-		if ( $key_name[0] <> null ) {
-			$auth1 = '<strong>'.$key_name[0].'</strong>';
-		} else {
-			$auth1 = null;
-		}
-		if ( $key_name[1] <> null ) {
-			$auth2 = ', <strong>'.$key_name[1].'</strong>';
-		} else {
-			$auth2 = null;
-		}
-		if ( $key_name[2] <> null ) {
-			$auth3 = ', <strong>'.$key_name[2].'</strong>';
-		} else {
-			$auth3 = null;
-		}
-		if ( $key_name[3] <> null ) {
-			$auth4 = ', <strong>'.$key_name[3].'</strong>';
-		} else {
-			$auth4 = null;
-		}
-		
-		$auth = $auth1.$auth2.$auth3.$auth4;
-	}
 	
-	if ( $auth == null ) {
-		$terms = get_the_terms ( $post->ID, 'autore_didattico' );
+	$terms = get_the_terms ( $post->ID, 'autore_didattico' );
+	if ( empty($terms) ) {
+        	$auth = null;
+        } else {
 		$numcat = sizeof( $terms );
-		$i = 0;
-		foreach ( $terms as $term ) {
-			$term_link = get_term_link( $term, 'autore_didattico' );
-			$i++;
-			if ( $i < $numcat ) {
-				$auth = $auth.'<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</a></strong>, ';
-			} else {
-				$auth = $auth.'<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</a></strong>';
-			}
+        $i = 0;
+		$auth = 'di ';
+        foreach ( $terms as $term ) {
+                $term_link = get_term_link( $term, 'autore_didattico' );
+                $i++;
+                if ( $i < $numcat )
+					$auth = $auth.'<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</strong></a>, ';
+                else
+					$auth = $auth.'<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</strong></a>';
 		}
-	}
-	
-	$auth = 'di '.$auth;
+  		}
 	
 	$curriculum = null;
 	
