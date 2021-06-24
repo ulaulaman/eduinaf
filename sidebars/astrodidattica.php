@@ -6,8 +6,7 @@ add_shortcode( 'sbdidattica', function () {
 	
 	$img = '<div align="center"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/avatar_eduinaf_blu.png" width="40%" /></div>';
 	
-	$livello = null;
-	
+	$livello = null;	
 	$terms = get_the_terms ( $post->ID, 'livello_educativo' );
 	if ( empty($terms) ) {
         	$livello = null;
@@ -20,8 +19,7 @@ add_shortcode( 'sbdidattica', function () {
 			$img = $img.'<div>'.$livello.'</div>';
   		}
 	
-	$type = null;
-	
+	$type = null;	
 	$terms = get_the_terms ( $post->ID, 'tipologia_contenuto' );
 	if ( empty($terms) ) {
 		$type = null;
@@ -38,8 +36,7 @@ add_shortcode( 'sbdidattica', function () {
 	}
 	}
 	
-	$auth = null;
-	
+	$auth = null;	
 	$terms = get_the_terms ( $post->ID, 'autore_didattico' );
 	if ( empty($terms) ) {
         	$auth = null;
@@ -61,77 +58,97 @@ add_shortcode( 'sbdidattica', function () {
 	
 	$curriculumastro = null;
 	$terms = get_the_terms ( $post->ID, 'argomento_astro' );
-	$numcat = sizeof( $terms );
-	$i = 0;
-	foreach ( $terms as $term ) {
-		$term_link = get_term_link( $term, 'argomento_astro' );
-		$i++;
-		if ( $i < $numcat ) {
-			$curriculumastro = $curriculumastro.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
-		} else {
-			$curriculumastro = $curriculumastro.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
-		}
+	if ( empty($terms) ) {
+		$curriculumastro = null;
+	} else {
+		$numcat = sizeof( $terms );
+		$i = 0;
+		foreach ( $terms as $term ) {
+			$i++;
+			$term_link = get_term_link( $term );
+			if ( $i < $numcat ) {
+				$curriculumastro = $curriculumastro.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
+			} else {
+				$curriculumastro = $curriculumastro.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
+			}
+		}	
 	}
 	
 	$curriculumsteam = null;
 	$terms = get_the_terms ( $post->ID, 'argomento_steam' );
-	$numcat = sizeof( $terms );
-	$i = 0;
-	foreach ( $terms as $term ) {
-		$term_link = get_term_link( $term, 'argomento_steam' );
-		$i++;
-		if ( $i < $numcat ) {
-			$curriculumsteam = $curriculumsteam.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
-		} else {
-			$curriculumsteam = $curriculumsteam.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
-		}
+	if ( empty($terms) ) {
+		$curriculumsteam = null;
+	} else {
+		$numcat = sizeof( $terms );
+		$i = 0;
+		foreach ( $terms as $term ) {
+			$i++;
+			if ( $i < $numcat ) {
+				$curriculumsteam = $curriculumsteam.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
+			} else {
+				$curriculumsteam = $curriculumsteam.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
+			}
+		}	
 	}
 	
 	$curriculum = '<strong>Argomenti dal <em>curriculum</em> scolastico:</strong>';
 	if ( $curriculumsteam <> null ) {
 		if ( $curriculumastro <> null ) {
-			$curriculum = '<p>'.$curriculum.'<br/>'.$curriculumastro.', '.$curriculumsteam.'</p>';
+			$curriculum = '<p>'.$curriculum.' '.$curriculumastro.', '.$curriculumsteam.'</p>';
 		} else {
-			$curriculum = '<p>'.$curriculum.'<br/>'.$curriculumsteam.'</p>';
+			$curriculum = '<p>'.$curriculum.' '.$curriculumsteam.'</p>';
 		}
 	} else {
 		if ( $curriculumastro <> null ) {
-			$curriculum = '<p>'.$curriculum.'<br/>'.$curriculumastro.'</p>';
+			$curriculum = '<p>'.$curriculum.' '.$curriculumastro.'</p>';
 		} else {
 			$curriculum = null;
 		}
 	}
 	
-	$keyw = '<strong>Parole chiave:</strong> ';
+	$keyw = null;
 	$terms = get_the_terms ( $post->ID, 'parole_chiave' );
-	$numcat = sizeof( $terms );
-	$i = 0;
-	foreach ( $terms as $term ) {
-		$term_link = get_term_link( $term, 'parole_chiave' );
-		$i++;
-		if ( $i < $numcat ) {
-			$keyw = $keyw.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
-		} else {
-			$keyw = $keyw.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
-		}		
+	if ( empty($terms) ) { 
+		$keyw = null;
+	} else {
+		$numcat = sizeof( $terms );
+		$i = 0;
+		foreach ( $terms as $term ) {
+			$term_link = get_term_link( $term, 'parole_chiave' );
+			$i++;
+			if ( $i < $numcat ) {
+				$keyw = $keyw.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
+			} else {
+				$keyw = $keyw.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
+			}		
+		}
+		$keyw = '<strong>Parole chiave:</strong> '.$keyw;
 	}
 	
-	$livello = '<strong>Livello:</strong> ';
+	$livello = null;
 	$terms = get_the_terms ( $post->ID, 'livello_educativo' );
-	$numcat = sizeof( $terms );
-	$i = 0;
-	foreach ( $terms as $term ) {
-		$term_link = get_term_link( $term, 'livello_educativo' );
-		$i++;
-		if ( $i < $numcat ) {
-			$livello = $livello.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
-		} else {
-			$livello = $livello.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
-		}		
+	if ( empty($term) ) {
+		$livello = null;
+	} else {
+		$numcat = sizeof( $terms );
+		$i = 0;
+		foreach ( $terms as $term ) {
+			$term_link = get_term_link( $term, 'livello_educativo' );
+			$i++;
+			if ( $i < $numcat ) {
+				$livello = $livello.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>, ';
+			} else {
+				$livello = $livello.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
+			}		
+		}
+		$livello = '<strong>Livello:</strong> '.$livello;
 	}
 	
+	$outnew = $img.'<p>'.$type.' '.$auth.'</p>'.$curriculum.'<p>'.$keyw.'</p><p>'.$livello.'</p>';
+
 	$durata = null;
-	if ( has_term( 'Percorso didattico', 'tipologia_contenuto' ) ) {
+	$terms = get_the_terms ( $post->ID, 'durata_attivita' );
+	if ( empty($term) ) {
 		$durata = null;
 	} else {
 		$terms = get_the_terms ( $post->ID, 'durata_attivita' );
@@ -139,6 +156,7 @@ add_shortcode( 'sbdidattica', function () {
 			$term_link = get_term_link( $term, 'durata_attivita' );
 			$durata = '<strong>Durata:</strong> <a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
 		}
+		$outnew = $outnew.'<p>'.$durata.'</p>';
 	}
 	
 	$supervisione = null;
@@ -161,14 +179,6 @@ add_shortcode( 'sbdidattica', function () {
 		$costo = null;
 		}
 	
-	$outnew = $img.'<p>'.$type.' '.$auth.'</p>'.$curriculum.'<p>'.$keyw.'</p><p>'.$livello.'</p>';
-	
-	if ( $durata <> 'null' ) {
-		$outnew = $outnew.'<p>'.$durata.'</p>';
-	} else {
-		$outnew = $outnew;
-	}
-	
 	if ( $supervisione <> 'null' ) {
 		$outnew = $outnew.'<p><strong>'.$supervisione.'</strong></p>';
 	} else {
@@ -181,8 +191,7 @@ add_shortcode( 'sbdidattica', function () {
 		$outnew = $outnew.'<p><strong>Costo:</strong> '.$costo.'</p>';
 	}
 	
-	$collaborazione = null;
-	
+	$collaborazione = null;	
 	$terms = get_the_terms ( $post->ID, 'collaborazioni' );
 	if ( empty($terms) ) {
         	$collaborazione = null;
