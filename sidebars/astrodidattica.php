@@ -127,7 +127,7 @@ add_shortcode( 'sbdidattica', function () {
 	
 	$livello = null;
 	$terms = get_the_terms ( $post->ID, 'livello_educativo' );
-	if ( empty($term) ) {
+	if ( empty($terms) ) {
 		$livello = null;
 	} else {
 		$numcat = sizeof( $terms );
@@ -148,7 +148,7 @@ add_shortcode( 'sbdidattica', function () {
 
 	$durata = null;
 	$terms = get_the_terms ( $post->ID, 'durata_attivita' );
-	if ( empty($term) ) {
+	if ( empty($terms) ) {
 		$durata = null;
 	} else {
 		$terms = get_the_terms ( $post->ID, 'durata_attivita' );
@@ -160,35 +160,31 @@ add_shortcode( 'sbdidattica', function () {
 	}
 	
 	$supervisione = null;
-	if ( has_term( 'Scheda didattica', 'tipologia_contenuto' ) || has_term( 'Laboratorio didattico', 'tipologia_contenuto' ) ) {
-		$terms = get_the_terms ( $post->ID, 'supervisione' );
+	$terms = get_the_terms ( $post->ID, 'supervisione' );
+	if ( empty($terms) ) {
+		$supervisione = null;
+	} else {
 		foreach ( $terms as $term ) {
 			$term_link = get_term_link( $term, 'supervisione' );
-			$supervisione = $term->name;
-	} } else {
-		$supervisione = null;
+			$supervisione = '<a rel="tag" href="'.$term_link.'"><strong>'.$term->name.'</strong></a>';
 		}
+		$outnew = $outnew.'<p>'.$supervisione.'</p>';
+	}
 	
 	$costo = null;
-	if ( has_term( 'Scheda didattica', 'tipologia_contenuto' ) || has_term( 'Laboratorio didattico', 'tipologia_contenuto' ) ) {
-		$terms = get_the_terms ( $post->ID, 'costo_attivita' );
+	$terms = get_the_terms ( $post->ID, 'costo_attivita' );
+	if ( empty($terms) ) {
+		$costo = null;
+	} else {
 		foreach ( $terms as $term ) {
 			$term_link = get_term_link( $term, 'costo_attivita' );
 			$costo = $term->name;
-	} } else {
-		$costo = null;
 		}
-	
-	if ( $supervisione <> 'null' ) {
-		$outnew = $outnew.'<p><strong>'.$supervisione.'</strong></p>';
-	} else {
-		$outnew = $outnew;
-	}
-	
-	if ( has_term( 'Percorso didattico', 'tipologia_contenuto' ) || has_term( 'Video didattico', 'tipologia_contenuto' ) || has_term( 'Video rubriche', 'tipologia_contenuto' ) ) {
-		$outnew = $outnew;
-	} else {
-		$outnew = $outnew.'<p><strong>Costo:</strong> '.$costo.'</p>';
+		if ( costo <> null ) {
+			$outnew = $outnew.'<p><strong>Costo:</strong> '.$costo;
+		} else {
+			$outnew = $outnew;
+		}	
 	}
 	
 	$collaborazione = null;	
