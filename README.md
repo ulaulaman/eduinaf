@@ -45,6 +45,8 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 ## Changelog
+* 2021.0626
+  * Conclusione delle modifiche ad astrodidattica.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
 * 2021.0624
   * Nuove modifiche al codice di astrodidattica.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
 * 2021.0513
