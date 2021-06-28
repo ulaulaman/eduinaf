@@ -20,9 +20,7 @@ add_shortcode('astroedu', 'astroedu');
       $link = '<a href="http://astroedu.iau.org/'.$lang.'/activities/'.$code.'/" target="astroedu" style="color: #faaf3f;">'.$content.'</a>';
    } else {
       $link = '<a href="http://astroedu.iau.org/it/activities/'.$code.'/" target="astroedu" style="color: #faaf3f;">'.$content.'</a>';
-   }
-
-   
+   }   
 
    return $link;
 }
