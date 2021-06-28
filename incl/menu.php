@@ -15,7 +15,7 @@ function eduinaf_toplevel_page() {
         echo '<h3><em>Shortcode</em> editoriali</h3>';
 	echo '<p>[astroedu code="..." lang="..."]</p>';
         echo '<p>[spacescoop code="..." lang="..."]</p>';
-        echo '<p>Entrambi i parametri sono obbligatori per il corretto funzionamento degli <em>shortcode</em>.</p>';
+        echo '<p>Nel parametro <em>code</em> va inserito il codice numerico relativo all\'attività. Nel parametro <em>lang</em> il codice di localizzazione (it, en, ecc.). Nel caso di assenza di quest\'ultimo parametro, it è inserito di <em>default</em>. Il parametro <em>code</em> è invece necessario per il corretto funzionamento dello <em>shortcode</em>.</p>';
         echo '<h3><em>Loop</em> come elenco</h3>';
         echo '<p>[postlooptab intro="testo di introduzione al <em>loop</em>" categoria="categoria" tag="tag" pag="numero post"]</p>';
         echo '<p>Lo <em>shortcode</em> funziona anche senza specificare alcuno dei parametri richiesti.</p>';
@@ -27,17 +27,15 @@ function eduinaf_toplevel_page() {
         echo '<li><strong>Corso base di astronomia</strong>: [sbcorsobase]</li>';
         echo '</ul>';
 	echo '<h3>Griglia di libri</h3>';
-        echo '<p>Il plugin aggiunge anche uno shortcode che genera una griglia. Esistono due distinte versioni: lo shortcode generico:</p>';
+        echo '<p>Il <em>plugin</em> aggiunge anche uno <em>shortcode</em> che genera una griglia. Esistono due distinte versioni: lo <em>shortcode</em> generico:</p>';
         echo '<p>[grigliaeduinaf categoria="..." etichetta="..."]</p>';
         echo '<p>in cui almeno uno dei due parametri deve essere specificato.</p>';
-        echo '<p>Il secondo shortcode, invece, genera una griglia appositamente per i libri:</p>';
+        echo '<p>Il secondo <em>shortcode</em>, invece, genera una griglia appositamente per i libri:</p>';
         echo '<p>[griglialibri etichetta="..."]</p>';
-        echo '<p>dove il parametro etichetta è, al momento, settato di default sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni</p>';
-	echo '<h3>Shortcode per gli speciali</h3>';
+        echo '<p>dove il parametro etichetta è, al momento, settato di <em>default</em> sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni</p>';
+	echo '<h3><em>Shortcode</em> per gli speciali</h3>';
 	echo '<p>Per la creazione del <em>loop</em> nella pagina di uno speciale:</p>';
 	echo '<p>[grigliaspeciali speciale="slug speciale" tipologia post"]</p>';
-	echo '<p>Per inserire una lista degli articoli di uno speciale nella barra laterale:</p>';
-	echo '<p>[tabspeciali speciale="slug speciale"]</p>';
 	echo '</div>';
 }
 
