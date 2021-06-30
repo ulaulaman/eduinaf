@@ -47,6 +47,8 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 == Changelog ==
+* 2021.0629
+  * Modifiche al codice di brera.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5) e ottimizzazione generale del codice
 * 2021.0628
   * Modifiche al codice di costellazioni.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
   * Sistemazioni varie nella pagina di descrizione del *plugin*
