@@ -1,7 +1,4 @@
 <?php
-# guide utilizzate: https://www.zenwebthemes.com/blog/create-grid-layout-wordpress-flexbox/
-# https://wordpress.stackexchange.com/questions/269671/wp-query-by-keyword-or-post-tag
-
 # shortcode per la creazione di un loop di articoli in funzione dei categoria e tag
 function postlooptab($atts) {
 	global $post;
@@ -13,6 +10,7 @@ function postlooptab($atts) {
 				'categoria' => null,
 				'tag' => null,
 				'pag' => null,
+				'stile' => '1',
 			),
 			$atts
 		)
@@ -60,19 +58,41 @@ function postlooptab($atts) {
 		while ( $q->have_posts() ) {
 			$q->the_post();
 			$titolo = get_the_title();
+			$autore = get_the_author();
+			$data = get_the_date();
+			$thumb = get_the_post_thumbnail($post->ID, 'thumbnail');
 			
-			$content .= '<li><a href="'.get_the_permalink().'">'.$titolo.'</a></li>';
-		}
+			$cats = get_the_category();
+			foreach ( $cats as $category ) {
+				$cat = $category->name;
+			}
+			
+			if ( $stile == 1 ) {
+				$content .= '<li><a href="'.get_the_permalink().'">'.$titolo.'</a></li>';
+			}
+			if ( $stile == 2 ) {
+				$content .= '<h5>'.$cat.'</h5><a href="'.get_the_permalink().'"><strong>'.$titolo.'</strong></a><br/><small><em>di '.$autore.' - '.$data.'</em></small><hr/>';
+			}
+			if ( $stile == 3 ) {
+				$content = $content.'<li class="grid-item"><span class="grid-border"><a href="'.get_the_permalink().'">'.$thumb.'</a></span></li>';
+			}
 	
 		/* ripristino */
-		wp_reset_postdata();
-		
-	}
+		wp_reset_postdata();		
+	}}
 	
 	if ( $content <> null ) {
-		$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6">'.$head.'</h4><ul>'.$content.'</ul></div>';
+		if ( $stile == 1 ) {
+			$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6">'.$head.'</h4><ul>'.$content.'</ul></div>';
+		}
+		if ( $stile == 2 ) {
+			$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6">'.$head.'</h4>'.$content.'</div>';
+		}
+		if ( $stile == 3 ) {
+			$content = '<ul class="grid-wrap">'.$content.'</ul>';
+		}
 	} else {
-		$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6">'.$head.'</h4><ul><li>Nessun articolo presente in archivio</li></ul></div><p></p>';
+		$content = '<div id="recent-posts-2" class="widget widget_recent_entries"><h4 class="widget-title h6">'.$head.'</h4>Nessun articolo presente in archivio</div><p></p>';
 	}
 	
 	$out = $content.$after_widget;
@@ -234,7 +254,6 @@ add_shortcode( 'griglialibri', 'griglialibri' );
 		$q->the_post();
 		
 		# recupero dei valori dei campi personalizzati definiti in metabox.php
-                # guida: https://wordpress.stackexchange.com/questions/13074/pull-custom-fields-from-custom-posts-within-a-loop
                 $customtitlevalue = get_post_meta($post->ID, "meta-titolo", true);
                 $thumb = get_the_post_thumbnail($post->ID, 'thumbnail');
 		
