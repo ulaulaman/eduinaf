@@ -39,6 +39,13 @@ Un altro *shortcode* genera una griglia appositamente per i libri:
 
 dove il parametro etichetta è, al momento, settato di *default* sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni.
 
+Per realizzare dei *loop* personalizzati si può utilizzare lo *shortcode*
+
+[postlooptab intro="Ultimi articoli" pag="5" categoria="..." tag="..." stile="1"]
+
+Nell'esempio sono inseriti, laddove presenti, i valori di *default*.
+Per gli stili, è possibile indicare 1 per un elenco in linea con quello del tema, 2 per un elenco con nome dell'autore e data di pubblicazione, 3 per una griglia di quadrati.
+
 Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In particolare i due *shortcode* hanno la seguente sintassi:
 
 * Griglia da inserire nella pagina dello Speciale: [grigliaspeciali speciale="slug speciale" tipo="slug tipologia post"]
@@ -47,6 +54,9 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 == Changelog ==
+* 2021.1007
+  * Aggiornato lo *shortcode* dei *loop* personalizzati con la distinzione tra 3 stili differenti
+  * Aggiunti gli shortcode e i documenti relativi al concorso Via Lattea Quaraquarinci dedicato a Gianni Rodari
 * 2021.0629
   * Modifiche al codice di brera.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5) e ottimizzazione generale del codice
 * 2021.0628
