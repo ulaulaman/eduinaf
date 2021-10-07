@@ -33,6 +33,10 @@ function eduinaf_toplevel_page() {
         echo '<p>Il secondo <em>shortcode</em>, invece, genera una griglia appositamente per i libri:</p>';
         echo '<p>[griglialibri etichetta="..."]</p>';
         echo '<p>dove il parametro etichetta è, al momento, settato di <em>default</em> sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni</p>';
+        echo '<h3><em>Loop</em> personalizzati</h3>';
+        echo '<p>Per realizzare dei <em>loop</em> personalizzati si può utilizzare lo <em>shortcode</em></p>';
+        echo '<p>[postlooptab intro="Ultimi articoli" pag="5" categoria="..." tag="..." stile="1"]</p>';
+        echo '<p>Nell\'esempio sono inseriti, laddove presenti, i valori di <em>default</em>.<br/>Per gli stili, è possibile indicare 1 per un elenco in linea con quello del tema, 2 per un elenco con nome dell\'autore e data di pubblicazione, 3 per una griglia di quadrati.</p>';
 	echo '<h3><em>Shortcode</em> per gli speciali</h3>';
 	echo '<p>Per la creazione del <em>loop</em> nella pagina di uno speciale:</p>';
 	echo '<p>[grigliaspeciali speciale="slug speciale" tipologia post"]</p>';
