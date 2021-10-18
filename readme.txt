@@ -54,9 +54,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
 
 == Changelog ==
+* 2021.1018 Aggiornati gli *shortcode* del concorso Rodari per l'anno 2021
 * 2021.1007
   * Aggiornato lo *shortcode* dei *loop* personalizzati con la distinzione tra 3 stili differenti
-  * Aggiunti gli shortcode e i documenti relativi al concorso Via Lattea Quaraquarinci dedicato a Gianni Rodari
+  * Aggiunti gli *shortcode* e i documenti relativi al concorso Via Lattea Quaraquarinci dedicato a Gianni Rodari
 * 2021.0629
   * Modifiche al codice di brera.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5) e ottimizzazione generale del codice
 * 2021.0628
