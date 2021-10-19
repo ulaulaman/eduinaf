@@ -47,13 +47,16 @@ Per gli stili, è possibile indicare 1 per un elenco in linea con quello del tem
 Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In particolare i due *shortcode* hanno la seguente sintassi:
 
 * Griglia da inserire nella pagina dello Speciale: [grigliaspeciali speciale="slug speciale" tipo="slug tipologia post"]
-* Box da inserire in un *widget* di testo per generare il sommario completo dello Speciale: [tabspeciali speciale="slug speciale"] (**disabilitato**)
 
 ### Storia
 
-Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/widget-for-co-authors/)).
+Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/#CoAuthorsWidget)).
 
 ## Changelog
+* 2021.1019
+  * Accorpati pezzi di codice in per ridurre il numeri dei *file* .php richiamati in quello principale
+  * Modifiche minori agli *shortcode* del concorso Rodari 2021
+  * Eliminata la pagina di descrizione nella bacheca
 * 2021.1018 Aggiornati gli *shortcode* del concorso Rodari per l'anno 2021
 * 2021.1007
   * Aggiornato lo *shortcode* dei *loop* personalizzati con la distinzione tra 3 stili differenti
@@ -87,6 +90,6 @@ Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors P
 
 ### Changelog precedenti
 
-* [Changelog 2020](https://github.com/ulaulaman/eduinaf/blob/master/changelog2020.md)
-* [Changelog 2018](https://github.com/ulaulaman/eduinaf/blob/master/changelog2018.md)
-* [Changelog pre 1.0](https://github.com/ulaulaman/eduinaf/blob/master/changelog01.md)
+* [Changelog 2020](changelog2020.md)
+* [Changelog 2018](changelog2018.md)
+* [Changelog pre 1.0](changelog01.md)
