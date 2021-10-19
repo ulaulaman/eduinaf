@@ -17,7 +17,7 @@ add_shortcode( 'rodari2021', function () {
 	$prisma = '<a href="http://www.prisma.inaf.it/" target="inaf">Progetto PRISMA</a><br/>';
 	$spazio = '<a href="https://sorvegliatispaziali.inaf.it/" target="inaf">Sorvegliati spaziali</a>';
 
-	$pagine = '<div align="center" style="padding-top:40px;"><h3>Pagine correlate</h3><strong>Per i piccoli</strong><br/>'.$beni.$libri.'<strong>Per tutti</strong>'.$prisma.$spazio.'</div>';
+	$pagine = '<div align="center" style="padding-top:40px;"><h3>Pagine correlate</h3><strong>Per i piccoli</strong><br/>'.$beni.$libri.'<strong>Per tutti</strong><br/>'.$prisma.$spazio.'</div>';
 	
 	$out = $menu.$pagine;
 
