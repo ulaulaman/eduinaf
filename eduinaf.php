@@ -2,7 +2,7 @@
 /*
 Plugin Name: Edu INAF Tools
 Description: Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
-Version: 2021.1018
+Version: 2021.1019
 Author: Gianluigi Filippelli
 Author URI: http://dropseaofulaula.blogspot.it/
 Plugin URI: https://ulaulaman.github.io/#EduINAF
@@ -12,14 +12,10 @@ License: GPLv2 or later
 /* ------------------------------------------------------ */
 # inclusione file
 define( 'EDUINAF__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-# pagina di descrizione
-require_once( EDUINAF__PLUGIN_DIR . 'incl/menu.php' );
-# manipolazione feed
+# manipolazione feed e aggiunta link personalizzati
 require_once( EDUINAF__PLUGIN_DIR . 'incl/feed.php' );
-# creazione link: astroedu, spacescoop
-require_once( EDUINAF__PLUGIN_DIR . 'link/link.php' );
 # metabox per campi aggiuntivi sui libri
-require_once( EDUINAF__PLUGIN_DIR . 'incl/metabox.php' );
+require_once( EDUINAF__PLUGIN_DIR . 'incl/libri.php' );
 # creazione loop e griglie
 require_once( EDUINAF__PLUGIN_DIR . 'incl/grid.php' );
 # creazione di un loop con griglia
@@ -31,9 +27,7 @@ require_once( EDUINAF__PLUGIN_DIR . 'sidebars/costellazioni.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'sidebars/brera.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'sidebars/widgets.php' );
 # Speciali
-require_once( EDUINAF__PLUGIN_DIR . 'speciali/speciali.php' );
-require_once( EDUINAF__PLUGIN_DIR . 'speciali/griglia.php' );
-# require_once( EDUINAF__PLUGIN_DIR . 'speciali/tabella.php' );
+require_once( EDUINAF__PLUGIN_DIR . 'incl/speciali.php' );
 # Mappe
 require_once( EDUINAF__PLUGIN_DIR . 'incl/mappe.php' );
 
