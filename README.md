@@ -53,6 +53,11 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/#CoAuthorsWidget)).
 
 ## Changelog
+* 2021.1022
+  * Corretti errori di sintassi nello *shortcode* per astroedu
+  * Cambiato colore dei link ad astroedu introducendo una nuova classe apposita e usando il *file css* generale
+  * Aggiunto il supporto per le diverse versioni al *file css*
+  * Aggiunto il codice per la striscietta sull'ultimo aggiornamento
 * 2021.1019
   * Accorpati pezzi di codice in per ridurre il numeri dei *file* .php richiamati in quello principale
   * Modifiche minori agli *shortcode* del concorso Rodari 2021
