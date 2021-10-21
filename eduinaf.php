@@ -13,7 +13,7 @@ License: GPLv2 or later
 # inclusione file
 define( 'EDUINAF__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 # manipolazione feed e aggiunta link personalizzati
-require_once( EDUINAF__PLUGIN_DIR . 'incl/feed.php' );
+require_once( EDUINAF__PLUGIN_DIR . 'incl/update.php' );
 # metabox per campi aggiuntivi sui libri
 require_once( EDUINAF__PLUGIN_DIR . 'incl/libri.php' );
 # creazione loop e griglie
