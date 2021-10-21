@@ -2,7 +2,7 @@
 /*
 Plugin Name: Edu INAF Tools
 Description: Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
-Version: 2021.1019
+Version: 2021.1022
 Author: Gianluigi Filippelli
 Author URI: http://dropseaofulaula.blogspot.it/
 Plugin URI: https://ulaulaman.github.io/#EduINAF
@@ -33,7 +33,7 @@ require_once( EDUINAF__PLUGIN_DIR . 'incl/mappe.php' );
 
 # inclusione di css personalizzato
  function edu_inaf_table () {
-	 wp_register_style( 'eduinaf', plugins_url( 'eduinaf/incl/eduinaf.css' ) );
+	 wp_register_style( 'eduinaf', plugins_url( 'eduinaf/incl/eduinaf.css' ), rand(111,9999), '1' );
 	 wp_enqueue_style( 'eduinaf' );
  }
 add_action( 'wp_enqueue_scripts', 'edu_inaf_table' );
