@@ -21,7 +21,7 @@ add_filter('the_excerpt_rss', 'rss_post_thumbnail');
 add_filter('the_content_feed', 'rss_post_thumbnail');
 
 # aggiunta autori in apertura e messaggio di chiusura per post nel feed
-function eduinaf_postrss($content) {
+function eduinaf_postrss( $content ) {
     if ( function_exists( 'get_coauthors' ) ) {
 	    $coauthors = coauthors_posts_links(", ", " e ", null, null, false);
 	} else {
@@ -29,7 +29,9 @@ function eduinaf_postrss($content) {
     }
     
     if( is_feed() ){
-        $content = '<p>Questo articolo è stato scritto da '.$coauthors.'</p>'.$content.'<p>Leggi Edu INAF</p>';
+        $url = get_the_author_meta( 'user_url' );
+		$name = get_the_author_meta( 'display_name' );
+		$coauthors = '<a href="'.$url.'">'.$name.'</a>';
     }
 
     return $content;
@@ -39,11 +41,11 @@ add_filter('the_content', 'eduinaf_postrss');
 
 # striscia ultimo aggiornamento
 function wpb_last_updated_date( $content ) {
-    $u_time = get_the_time('U'); 
-    $u_modified_time = get_the_modified_time('U'); 
-    if ($u_modified_time >= $u_time + 86400) { 
+    $u_time = get_the_time('U');
+    $u_modified_time = get_the_modified_time('U');
+    if ( $u_modified_time >= $u_time + 86400 ) { 
         $updated_date = get_the_modified_time('j F Y');
-        $custom_content .= '<p class="last-updated">Aggiornato il '. $updated_date .'</p>';
+        $custom_content = '<p class="last-updated">Aggiornato il '. $updated_date .'</p>';
     }
     
     $custom_content .= $content;
