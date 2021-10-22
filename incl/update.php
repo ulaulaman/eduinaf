@@ -25,13 +25,13 @@ function eduinaf_postrss( $content ) {
     if ( function_exists( 'get_coauthors' ) ) {
 	    $coauthors = coauthors_posts_links(", ", " e ", null, null, false);
 	} else {
-	    $coauthors = get_author_posts_url( $coauthor->ID, $coauthor->user_nicename );
-    }
-    
-    if( is_feed() ){
-        $url = get_the_author_meta( 'user_url' );
+	    $url = get_the_author_meta( 'user_url' );
 		$name = get_the_author_meta( 'display_name' );
 		$coauthors = '<a href="'.$url.'">'.$name.'</a>';
+    }
+    
+    if ( is_feed() ) {
+        $content = '<p>Questo articolo è stato scritto da '.$coauthors.'</p>'.$content.'<p>Leggi Edu INAF</p>';
     }
 
     return $content;
