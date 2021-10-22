@@ -58,6 +58,7 @@ Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors P
   * Cambiato colore dei link ad astroedu introducendo una nuova classe apposita e usando il *file css* generale
   * Aggiunto il supporto per le diverse versioni al *file css*
   * Aggiunto il codice per la striscietta sull'ultimo aggiornamento
+  * Modificata parte che aggiunge l'autore nel *feed rss* nel caso in cui *Co-Authors Plus* non sia installato
 * 2021.1019
   * Accorpati pezzi di codice in per ridurre il numeri dei *file* .php richiamati in quello principale
   * Modifiche minori agli *shortcode* del concorso Rodari 2021
