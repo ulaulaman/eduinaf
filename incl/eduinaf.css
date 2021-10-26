@@ -320,3 +320,33 @@ div.paleBlueRows {
 a.astroedu:link {color:#f4900c;}
 a.astroedu:visited {color:#faaf3f;}
 a.astroedu:hover {color:#ffcc00;}
+
+/* last update */
+
+.last-updated {
+    font-size: small;
+    text-transform: uppercase;
+    background-color: #06a0db;
+}
+
+/* domande risposte */
+
+#cit::before { content: open-quote; }
+#cit::after { content: close-quote; }
+#cit {
+	quotes: "«" "»" "‘" "’";
+	font-style: italic;
+}
+
+#ask {
+	font-weight: bold;
+}
+
+/* box */
+
+#box {
+	margin: 15px;
+	padding: 10px 25px 10px 25px;
+	background: #fafafa;
+	border: 1px solid #1d71b8;
+}
