@@ -2,7 +2,7 @@
 /*
 Plugin Name: Edu INAF Tools
 Description: Il plugin aggiunge varie funzionalità al sito Edu INAF senza modificare direttamente il codice php del tema.
-Version: 2021.1022
+Version: 2021.1026
 Author: Gianluigi Filippelli
 Author URI: http://dropseaofulaula.blogspot.it/
 Plugin URI: https://ulaulaman.github.io/#EduINAF
@@ -18,6 +18,7 @@ require_once( EDUINAF__PLUGIN_DIR . 'incl/update.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'incl/libri.php' );
 # creazione loop e griglie
 require_once( EDUINAF__PLUGIN_DIR . 'incl/grid.php' );
+require_once( EDUINAF__PLUGIN_DIR . 'incl/widgets.php' );
 # creazione di un loop con griglia
 require_once( EDUINAF__PLUGIN_DIR . 'rodari/rodari.php' );
 # sidebar personalizzate
@@ -32,15 +33,15 @@ require_once( EDUINAF__PLUGIN_DIR . 'incl/speciali.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'incl/mappe.php' );
 
 # inclusione di css personalizzato
- function edu_inaf_table () {
-	 wp_register_style( 'eduinaf', plugins_url( 'eduinaf/incl/eduinaf.css' ), rand(111,9999), '1' );
-	 wp_enqueue_style( 'eduinaf' );
- }
+function edu_inaf_table () {
+	wp_register_style( 'eduinaf', plugins_url( 'eduinaf/incl/eduinaf.css' ), rand(111,9999), '2021.1026' );
+	wp_enqueue_style( 'eduinaf' );
+}
 add_action( 'wp_enqueue_scripts', 'edu_inaf_table' );
 
 # messaggio nell'admin footer
 function remove_footer_admin () {
-	echo 'Benvenuto su <a href="https://edu.inaf.it/" target="inaf">Edu INAF</a> | Sito realizzato con <a href="https://www.wordpress.org" target="word">WordPress</a></p>';
+	echo 'Benvenuto su <a href="https://edu.inaf.it/" target="inaf">EduINAF</a> | Sito realizzato con <a href="https://www.wordpress.org" target="word">WordPress</a></p>';
 } 
 add_filter('admin_footer_text', 'remove_footer_admin');
 
@@ -53,7 +54,7 @@ function custom_login_logo() {
 add_action('login_head', 'custom_login_logo');
 
 function eduinaf_login_logo_url() {
-    return home_url();
+	return home_url();
 }
 add_filter( 'login_headerurl', 'eduinaf_login_logo_url' );
 
