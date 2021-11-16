@@ -53,6 +53,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/#CoAuthorsWidget)).
 
 ## Changelog
+* 2021.1116
+  * Modificato il colore della striscia dell'ultimo aggiornamento
+  * Inserito il menu *costellazioni* alla fine della *sidebar* corrispondente
+  * Elimintati i *widget* delle singole *sidebar*
 * 2021.1026
   * Modifche minori in rodari.php
   * Aggiornamento *file css*
