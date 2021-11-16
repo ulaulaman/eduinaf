@@ -87,8 +87,18 @@ add_shortcode( 'sbcostellazioni', function () {
 
 	$auth = do_shortcode('[blog-post-coauthors]');
 	$cura = '<h4 class="widget-title"><span>Scheda a cura di</h4><p><strong>'.$auth.'</strong></p>';
+
+	$starsNav = wp_get_nav_menu_items(1895);
 	
-	$out = $out.$cura;
+	foreach ( $starsNav as $navItem ) {
+		$nav = $nav. '<button><a href="'.$navItem->url.'" title="'.$navItem->title.'">'.$navItem->title.'</a></button>';
+	}
+
+	$menu = '<div align="center" class="btn-group">'.$nav.'</div>';
+	
+	$out = $menu;
+	
+	$out = $out.$cura.$menu;
 
 	return $out;
 } );
