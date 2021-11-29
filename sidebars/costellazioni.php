@@ -24,7 +24,7 @@ add_shortcode( 'sbcostellazioni', function () {
 	
 	$custom = get_post_custom();
 	if ( empty($custom) ) {
-		$out = null;
+		$map = null;
 	} else {
 		foreach( $custom as $key => $value ) { 
 			$key_name = get_post_custom_values( $key = 'ascensione_retta_centrale' );
@@ -40,7 +40,7 @@ add_shortcode( 'sbcostellazioni', function () {
 				$mappa2 = '<p><img src="'.$key_name[2].'" /></p>';
 			} else { $mappa2 = null; }
 		}
-		$out = $mappa.$mappa1.$mappa2.$field1.$field2;
+		$map = $mappa.$mappa1.$mappa2.$field1.$field2;
 	}
 	
 	$type = 'emisfero ';
@@ -59,7 +59,7 @@ add_shortcode( 'sbcostellazioni', function () {
 				$type = $type.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
 			}		
 		}
-		$out = $out.'<p><strong>Visibile in</strong>: '.$type.'</p>';
+		$earth = '<p><strong>Visibile in</strong>: '.$type.'</p>';
 	}
 	
 	$terms = get_the_terms ( $post->ID, 'stagione' );
@@ -82,7 +82,7 @@ add_shortcode( 'sbcostellazioni', function () {
 				$season = $season.'<a rel="tag" href="'.$term_link.'">'.$term->name.'</a>';
 			}		
 		}
-		$out = $out.'<p>'.$season.'</p>';
+		$earth = $earth.'<p>'.$season.'</p>';
 	}
 
 	$auth = do_shortcode('[blog-post-coauthors]');
@@ -96,9 +96,7 @@ add_shortcode( 'sbcostellazioni', function () {
 
 	$menu = '<div align="center" class="btn-group">'.$nav.'</div>';
 	
-	$out = $menu;
-	
-	$out = $out.$cura.$menu;
+	$out = $map.$earth.$cura.$menu;
 
 	return $out;
 } );
