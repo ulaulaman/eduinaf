@@ -30,14 +30,9 @@ Entrambi i parametri sono obbligatori per il corretto funzionamento degli *short
 
 Il *plugin* aggiunge degli *shortcode* per generare delle griglia di *post*. Si può utilizzare uno *shortcode* generico:
 
-[grigliaeduinaf categoria="..." etichetta="..."]
+[grigliata categoria="..." etichetta="..." tassonomia="..." valore="..."]
 
-in cui almeno uno dei due parametri deve essere specificato.
-Un altro *shortcode* genera una griglia appositamente per i libri:
-
-[griglialibri etichetta="..."]
-
-dove il parametro etichetta è, al momento, settato di *default* sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni.
+in cui almeno uno dei due parametri deve essere specificato. Nel caso di *tassonomia*, a questo sarebbe buona norma abbinare anche il *valore* che può assumere la tassonomia personalizzata.
 
 Per realizzare dei *loop* personalizzati si può utilizzare lo *shortcode*
 
@@ -53,6 +48,10 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/#CoAuthorsWidget)).
 
 == Changelog ==
+* 2022.0610
+  * Modifica *link* della barra laterale del concorso Rodari
+  * Eliminazione delle griglie eduinaf e libri e semplificazione della grigliata
+  * Accorpamento di speciali e grid in quest'ultimo
 * 2021.1129
   * Tolta riga che generava ripetizione del menu in *costellazioni* e rinominate variabili interne
   * Sostituito il logo Europlanet per le schede didattiche

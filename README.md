@@ -20,20 +20,13 @@ Definisce anche gli *shortcode* per inserire le attività didattiche da astroedu
 
 Entrambi i parametri sono obbligatori per il corretto funzionamento degli *shortcode*.
 
-### Griglie per i *loop*
+### Griglie e *loop*
 
 Il *plugin* aggiunge degli *shortcode* per generare delle griglia di *post*. Si può utilizzare uno *shortcode* generico:
 
-[grigliaeduinaf categoria="..." etichetta="..."]
+[grigliata categoria="..." etichetta="..." tassonomia="..." valore="..."]
 
-in cui almeno uno dei due parametri deve essere specificato.
-Un altro *shortcode* genera una griglia appositamente per i libri:
-
-[griglialibri etichetta="..."]
-
-dove il parametro etichetta è, al momento, settato di *default* sul valore "libri-per-bambini-e-ragazzi" e va utilizzato per distinguere tra le tre differenti sottosezioni delle recensioni.
-
-### *Loop* personalizzati
+in cui almeno uno dei due parametri deve essere specificato. Nel caso di *tassonomia*, a questo sarebbe buona norma abbinare anche il *valore* che può assumere la tassonomia personalizzata.
 
 Per realizzare dei *loop* personalizzati si può utilizzare lo *shortcode*
 
@@ -53,60 +46,14 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/#CoAuthorsWidget)).
 
 ## Changelog
-* 2021.1129
-  * Tolta riga che generava ripetizione del menu in *costellazioni* e rinominate variabili interne
-  * Sostituito il logo Europlanet per le schede didattiche
-* 2021.1116
-  * Modificato il colore della striscia dell'ultimo aggiornamento
-  * Inserito il menu *costellazioni* alla fine della *sidebar* corrispondente
-  * Elimintati i *widget* delle singole *sidebar*
-* 2021.1026
-  * Modifche minori in rodari.php
-  * Aggiornamento *file css*
-  * Aggiunto *widget* per l'inserimento degli *shortcode* nelle *sidebar*
-* 2021.1022
-  * Corretti errori di sintassi nello *shortcode* per astroedu
-  * Cambiato colore dei link ad astroedu introducendo una nuova classe apposita e usando il *file css* generale
-  * Aggiunto il supporto per le diverse versioni al *file css*
-  * Aggiunto il codice per la striscietta sull'ultimo aggiornamento
-  * Modificata parte che aggiunge l'autore nel *feed rss* nel caso in cui *Co-Authors Plus* non sia installato
-* 2021.1019
-  * Accorpati pezzi di codice in per ridurre il numeri dei *file* .php richiamati in quello principale
-  * Modifiche minori agli *shortcode* del concorso Rodari 2021
-  * Eliminata la pagina di descrizione nella bacheca
-* 2021.1018 Aggiornati gli *shortcode* del concorso Rodari per l'anno 2021
-* 2021.1007
-  * Aggiornato lo *shortcode* dei *loop* personalizzati con la distinzione tra 3 stili differenti
-  * Aggiunti gli shortcode e i documenti relativi al concorso Via Lattea Quaraquarinci dedicato a Gianni Rodari
-* 2021.0629
-  * Modifiche al codice di brera.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5) e ottimizzazione generale del codice
-* 2021.0628
-  * Modifiche al codice di costellazioni.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
-  * Sistemazioni varie nella pagina di descrizione del *plugin*
-  * Modifiche minori in link.php
-* 2021.0626
-  * Conclusione delle modifiche ad astrodidattica.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
-* 2021.0624
-  * Nuove modifiche al codice di astrodidattica.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
-* 2021.0513
-  * Nuove modifiche al codice di astrodidattica.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
-  * Aggiunto nuovo logo per le collaborazioni
-* 2021.0508
-  * Disabilitata tabella.php in attesa di risolvere il problema nell'[*issue* segnalato](https://github.com/ulaulaman/eduinaf/issues/4)
-  * Modifiche al codice di astrodidattica.php per risolvere le [*issue* segnalate](https://github.com/ulaulaman/eduinaf/issues/5)
-* 2021.0416
-  * Spacchettato il *file* speciali.php in tre *file* separati
-  * Estesi gli speciali anche ai video della settimana
-  * Rivisto parte del codice della griglia degli speciali
-* 2021.0410
-  * Corretto errore in [grigliaspeciali] dovuto a *query* senza risultato
-  * Aggiunte tipologie di post differenti in [grigliaspeciali]
-* 2021.0409
-  * Aggiunto il logo di Roma3
-  * Sistemata la parte degli argomenti del *curriculum* scolastico nella *sidebar* di astrodidattica
+* 2022.0610
+  * Modifica *link* della barra laterale del concorso Rodari
+  * Eliminazione delle griglie eduinaf e libri e semplificazione della grigliata
+  * Accorpamento di speciali e grid in quest'ultimo
 
 ### Changelog precedenti
 
+* [Changelog 2021](changelog2021.md)
 * [Changelog 2020](changelog2020.md)
 * [Changelog 2018](changelog2018.md)
 * [Changelog pre 1.0](changelog01.md)
