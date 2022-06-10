@@ -13,7 +13,7 @@ add_shortcode( 'rodari2021', function () {
 	$menu = '<div align="center" class="btn-group">'.$nav.'</div>';
 
 	$beni = '<a href="http://www.beniculturali.inaf.it/eventi/universi-da-ascoltare/" target="inaf">Universi da ascoltare</a><br/>';
-	$libri = '<a href="https://www.beniculturali.inaf.it/eventi/libri-di-astronomia-per-bambini-e-ragazzi-2020/" target="inaf">Libri di astronomia per bambini e ragazzi (2020)</a><br/>';
+	$libri = '<a href="https://edu.inaf.it/libri-astronomia-bambini-ragazzi" target="inaf">Libri di astronomia per bambini e ragazzi</a><br/>';
 	$prisma = '<a href="http://www.prisma.inaf.it/" target="inaf">Progetto PRISMA</a><br/>';
 	$spazio = '<a href="https://sorvegliatispaziali.inaf.it/" target="inaf">Sorvegliati Spaziali</a>';
 
