@@ -27,11 +27,12 @@ add_shortcode( 'rodari2021', function () {
 add_shortcode( 'rodaridocs', function () {
 	
 	$informativa = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Informativa_concorso_Rodari.pdf" target="pdf">Informativa sul trattamento dei dati personali</a>';
-	$bando = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Bando_Concorso_GianniRodari_2021.pdf" target="pdf">Bando del concorso</a>';
-	$scheda = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/pubblicazione_contenuti_Rodari.pdf" target="pdf">Scheda di autorizzazione</a>';
-	$locandine = 'Locandine: <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2021-nero.pdf" target="pdf">in nero</a>, <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2021-bianco.pdf" target="pdf">in bianco</a>';
-	$form = '<a href="https://forms.gle/SteFQ3LVNe6SouLy5" target="form">Modulo di iscrizione</a>';
-	$formclasse = '<a href="https://forms.gle/85NeTHYHh7M3su29A" target="form">Modulo di iscrizione</a>';
+	$bando = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Bando_Concorso_GianniRodari_2022.pdf" target="pdf">Bando del concorso</a>';
+	$scheda1 = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/pubblicazione_contenuti_Rodari.pdf" target="pdf">Scheda di autorizzazione</a>';
+	$scheda = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Scheda_di_autorizzazione_Concorso_Rodari_2022.pdf" target="pdf">Scheda di autorizzazione</a>';
+	$locandine = 'Locandine: <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2022-nero.png" target="img">in nero</a>, <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2022-bianco.png" target="img">in bianco</a>';
+	$form = '<a href="https://forms.gle/xs6gRkqaQ4QUQDRcA" target="form">Modulo di iscrizione</a>';
+	$formclasse = '<a href="https://forms.gle/SSk4KDojv6wjtj7e7" target="form">Modulo di iscrizione</a>';
 	
 	$lista = '<ul><li>Partecipazione individuale: '.$form.', '.$scheda.'</li><li>Partecipazione per classe: '.$formclasse.'</li><li>'.$informativa.'</li><li>'.$bando.'</li><li>'.$locandine.'</li></ul>';
 	
