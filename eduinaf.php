@@ -18,7 +18,7 @@ require_once( EDUINAF__PLUGIN_DIR . 'incl/update.php' );
 require_once( EDUINAF__PLUGIN_DIR . 'incl/libri.php' );
 # creazione loop e griglie
 require_once( EDUINAF__PLUGIN_DIR . 'incl/grid.php' );
-require_once( EDUINAF__PLUGIN_DIR . 'incl/widgets.php' );
+# require_once( EDUINAF__PLUGIN_DIR . 'incl/widgets.php' );
 # creazione di un loop con griglia
 require_once( EDUINAF__PLUGIN_DIR . 'rodari/rodari.php' );
 # sidebar personalizzate
