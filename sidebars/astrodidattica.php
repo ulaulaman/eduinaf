@@ -213,3 +213,21 @@ add_shortcode( 'sbdidattica', function () {
 
 	return $outnew;
 } );
+
+add_shortcode( 'livellodida', function () {
+
+	$livellodid = null;	
+	$terms = get_the_terms ( $post->ID, 'livello_educativo' );
+	if ( empty($terms) ) {
+        	$livellodid = null;
+        } else {
+		$numcat = sizeof( $terms );
+        foreach ( $terms as $term ) {
+                $term_link = get_term_link( $term, 'livello_educativo' );
+                $livellodid = $livellodid.'<a rel="tag" href="'.$term_link.'" title="Vedi tutte le attività del livello: '.$term->name.'"><img src="https://edu.inaf.it/wp-content/plugins/eduinaf/images/dida/'.$term->slug.'.png" width="25%" /></a>';
+		}
+			$img = $img.'<div>'.$livellodid.'</div>';
+  		}
+
+	return $img;
+} );
