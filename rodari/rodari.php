@@ -1,5 +1,50 @@
 <?php
 
+/* Documenti */
+
+add_shortcode( 'rodaridocs', function () {
+	
+	$informativa = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Informativa_concorso_Rodari.pdf" target="pdf">Informativa sul trattamento dei dati personali</a>';
+	$bando = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Bando_Concorso_GianniRodari_2023.pdf" target="pdf">Bando del concorso</a>';
+	$scheda1 = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/pubblicazione_contenuti_Rodari.pdf" target="pdf">Scheda di autorizzazione</a>';
+	$scheda = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Scheda_di_autorizzazione_Concorso_Rodari_2023.pdf" target="pdf">Scheda di autorizzazione</a>';
+	$locandine = 'Locandine: <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2022-nero.png" target="img">in nero</a>, <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2022-bianco.png" target="img">in bianco</a>';
+	$form = '<a href="https://edu.inaf.it/concorso-gianni-rodari/form-individuale" target="form">Modulo di iscrizione</a>';
+	$formclasse = '<a href="https://edu.inaf.it/concorso-gianni-rodari/form-classe" target="form">Modulo di iscrizione</a>';
+	
+	$lista = '<ul><li>Partecipazione individuale: '.$form.', '.$scheda.'</li><li>Partecipazione per classe: '.$formclasse.'</li><li>'.$informativa.'</li><li>'.$bando.'</li><li>'.$locandine.'</li></ul>';
+	
+	$allegati = '<div align="center"><h3>Moduli e documentazione</h3></div>'.$lista;
+	
+	$out = $allegati;
+
+	return $out;
+} );
+
+/* Concorso Rodari 2022 */
+
+add_shortcode( 'rodari2022', function () {
+	
+	$rodariNav = wp_get_nav_menu_items(3729);
+	
+	foreach ( $rodariNav as $navItem ) {
+		$nav = $nav. '<button><a href="'.$navItem->url.'" title="'.$navItem->title.'">'.$navItem->title.'</a></button>';
+	}
+	
+	$menu = '<div align="center" class="btn-group">'.$nav.'</div>';
+
+	$beni = '<a href="http://www.beniculturali.inaf.it/eventi/universi-da-ascoltare/" target="inaf">Universi da ascoltare</a><br/>';
+	$libri = '<a href="https://edu.inaf.it/libri-astronomia-bambini-ragazzi" target="eduinaf">Libri di astronomia per bambini e ragazzi</a><br/>';
+	$briciole = '<a href="http://edu.inaf.it/briciole-spaziali/" target="eduinaf">Briciole Spaziali</a><br/>';
+	$edprecedenti = '<a href="https://edu.inaf.it/concorsi/concorso-gianni-rodari-2020/" target="eduinaf">Concorso Rodari 2020</a><br/><a href="https://edu.inaf.it/concorsi/concorso-gianni-rodari-2021/" target="eduinaf">Concorso Rodari 2021</a>';
+
+	$pagine = '<div align="center" style="padding-top:40px;"><h3>Pagine correlate</h3> <br/>'.$beni.$libri.$briciole.$edprecedenti.'</div>';
+	
+	$out = $menu.$pagine;
+
+	return $out;
+} );
+
 /* Concorso Rodari 2021 */
 
 add_shortcode( 'rodari2021', function () {
@@ -20,25 +65,6 @@ add_shortcode( 'rodari2021', function () {
 	$pagine = '<div align="center" style="padding-top:40px;"><h3>Pagine correlate</h3><strong>Per i piccoli</strong><br/>'.$beni.$libri.'<strong>Per tutti</strong><br/>'.$prisma.$spazio.'</div>';
 	
 	$out = $menu.$pagine;
-
-	return $out;
-} );
-
-add_shortcode( 'rodaridocs', function () {
-	
-	$informativa = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Informativa_concorso_Rodari.pdf" target="pdf">Informativa sul trattamento dei dati personali</a>';
-	$bando = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Bando_Concorso_GianniRodari_2022.pdf" target="pdf">Bando del concorso</a>';
-	$scheda1 = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/pubblicazione_contenuti_Rodari.pdf" target="pdf">Scheda di autorizzazione</a>';
-	$scheda = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Scheda_di_autorizzazione_Concorso_Rodari_2022.pdf" target="pdf">Scheda di autorizzazione</a>';
-	$locandine = 'Locandine: <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2022-nero.png" target="img">in nero</a>, <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2022-bianco.png" target="img">in bianco</a>';
-	$form = '<a href="https://forms.gle/xs6gRkqaQ4QUQDRcA" target="form">Modulo di iscrizione</a>';
-	$formclasse = '<a href="https://forms.gle/SSk4KDojv6wjtj7e7" target="form">Modulo di iscrizione</a>';
-	
-	$lista = '<ul><li>Partecipazione individuale: '.$form.', '.$scheda.'</li><li>Partecipazione per classe: '.$formclasse.'</li><li>'.$informativa.'</li><li>'.$bando.'</li><li>'.$locandine.'</li></ul>';
-	
-	$allegati = '<div align="center"><h3>Moduli e documentazione</h3></div>'.$lista;
-	
-	$out = $allegati;
 
 	return $out;
 } );
