@@ -12,7 +12,7 @@ add_shortcode( 'rodaridocs', function () {
 	$form = '<a href="https://edu.inaf.it/concorso-gianni-rodari/form-individuale" target="form">Modulo di iscrizione</a>';
 	$formclasse = '<a href="https://edu.inaf.it/concorso-gianni-rodari/form-classe" target="form">Modulo di iscrizione</a>';
 	
-	$lista = '<ul><li>Partecipazione individuale: '.$form.', '.$scheda.'</li><li>Partecipazione per classe: '.$formclasse.'</li><li>'.$informativa.'</li><li>'.$bando.'</li><li>'.$locandine.'</li></ul>';
+	$lista = '<ul><li>Partecipazione individuale: '.$form.', '.$scheda.'</li><li>Partecipazione per classe: '.$formclasse.'</li><li>'.$informativa.'</li><li>'.$bando.'</li></ul>';
 	
 	$allegati = '<div align="center"><h3>Moduli e documentazione</h3></div>'.$lista;
 	
