@@ -4,15 +4,15 @@
 
 add_shortcode( 'rodaridocs', function () {
 	
-	$informativa = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Informativa_concorso_Rodari.pdf" target="pdf">Informativa sul trattamento dei dati personali</a>';
-	$bando = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Bando_Concorso_GianniRodari_2023.pdf" target="pdf">Bando del concorso</a>';
-	$scheda1 = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/pubblicazione_contenuti_Rodari.pdf" target="pdf">Scheda di autorizzazione</a>';
+	$informativa = '<a href="https://edu.inaf.it/concorso-gianni-rodari/informativa_privacy.pdf" target="pdf">Informativa sul trattamento dei dati personali</a>';
+	$bando = '<a href="https://edu.inaf.it/concorso-gianni-rodari/bando.pdf" target="pdf">Bando del concorso</a>';
+	$scheda1 = '<a href="https://edu.inaf.it/concorso-gianni-rodari/scheda-autorizzazione-concorso-rodari.pdf" target="pdf">Scheda di autorizzazione</a>';
 	$scheda = '<a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/Scheda_di_autorizzazione_partecipazione_Concorso_Rodari.pdf" target="pdf">Scheda di autorizzazione</a>';
-	$locandine = 'Locandine: <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2022-nero.png" target="img">in nero</a>, <a href="https://edu.inaf.it/wp-content/plugins/eduinaf/rodari/A-Gianni-Rodari-2022-bianco.png" target="img">in bianco</a>';
+	$locandine = 'Locandine: <a href="https://edu.inaf.it/concorso-gianni-rodari/locandina_black" target="img">in nero</a>, <a href="https://edu.inaf.it/concorso-gianni-rodari/locandina_white" target="img">in bianco</a>';
 	$form = '<a href="https://edu.inaf.it/concorso-gianni-rodari/form-individuale" target="form">Modulo di iscrizione</a>';
 	$formclasse = '<a href="https://edu.inaf.it/concorso-gianni-rodari/form-classe" target="form">Modulo di iscrizione</a>';
 	
-	$lista = '<ul><li>Partecipazione individuale: '.$form.', '.$scheda.'</li><li>Partecipazione per classe: '.$formclasse.'</li><li>'.$informativa.'</li><li>'.$bando.'</li></ul>';
+	$lista = '<ul><li>Partecipazione individuale: '.$form.', '.$scheda.'</li><li>Partecipazione per classe: '.$formclasse.'</li><li>'.$informativa.'</li><li>'.$bando.'</li><li>'.$locandine.'</li></ul>';
 	
 	$allegati = '<div align="center"><h3>Moduli e documentazione</h3></div>'.$lista;
 	
@@ -88,6 +88,8 @@ add_shortcode( 'rodari2020', function () {
 
 	return $out;
 } );
+
+/* Documenti 2020 */
 
 add_shortcode( 'rodaridocs2020', function () {
 	
