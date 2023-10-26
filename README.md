@@ -46,7 +46,11 @@ Aggiunti una tassonomia e due *shortcode* per la gestione degli Speciali. In par
 Il *plugin* è stato originariamente sviluppato per integrarsi con [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/). I codici di integrazione con questo *plugin* sono stati cancellati dalla versione attuale e spostati in [Co-Authors Widget](https://wordpress.org/plugins/widget-for-co-authors/) (vedi anche la [pagina del *plugin*](https://ulaulaman.github.io/#CoAuthorsWidget)).
 
 ## Changelog
-* 2023.1023 Cambio file scheda di partecipazione concorso Rodari 2023
+* 2023.1026 Aggiornati link documenti concorso Rodari
+* 2023.1023
+  * Cambio file scheda di partecipazione concorso Rodari 2023
+  * Eliminati link alle locandine
+  * Aggiornata compatibilità versione Wordpress
 * 2023.1019 Modificati link e aggiunti documenti per Rodari 2023 e archiviato il menu di Rodari 2022
 * 2023.0113 Aggiuntinuovi loghi in collaborazioni
 * 2022.1020 Correzione errori versione precedente e nuovo bando concorso Rodari 2022
